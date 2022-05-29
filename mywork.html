@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>JJP - Mywork</title>
+        
+        <script>
+           function openSlideMenu(){
+        document.getElementsByTagName('header')[0].style.alignItems = 'unset';
+        document.getElementsByTagName('header')[0].style.padding = '0';
+        document.getElementsByTagName('nav')[0].style.width = '22%';
+        document.getElementsByTagName('nav')[0].style.display = 'flex';
+        document.getElementById('nav-logo').style.margin = '68px -300%';
+    }
+  function closeSlideMenu(){
+    document.getElementsByTagName('header')[0].style.alignItems = 'center';
+    document.getElementsByTagName('header')[0].style.padding = '55px 5%';
+    document.getElementsByTagName('nav')[0].style.width = '0';
+    document.getElementsByTagName('nav')[0].style.display = 'none';
+document.getElementById('nav-logo').style.margin = '0';
+  }
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <span>
+                <a onclick="openSlideMenu()">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </span>
+            <nav>
+                  <i onclick="closeSlideMenu()" class="fas fa-angle-double-left close"></i>
+
+                 <ul>
+
+                     <li>
+                        <a href="index.html">Home</a>
+                     </li>
+                     <li>
+                         <a href="mywork.html">My work</a>
+                     </li>
+                     <li>
+                         <a href="contact.html">Contact</a>
+                     </li>
+                 </ul>
+            </nav>
+            <a href="index.html">
+            <img id="nav-logo" src="assets/navbar-logo-1.png">
+            </a>
+        </header>
+        <main id="mywork">
+            <header>
+                <div class="yes">
+                    <h1> My work</h1>
+                                <a class="button-1"  href="assets/images/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >my resumé </a>
+                </div>
+            </header>  
+            <section>
+                <ul>
+                    <li>
+                        <figure>
+                            <a id="designButton" href="#">Design</a>
+
+                            <img src="assets/jessys/jesssysmywork.JPG">  
+                            <a class="button-work" href="myWork/jessys.html">
+                                <figcaption>
+                                    <h2>Jessy's</h2>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a id="websiteButton" href="#">Website</a>
+
+                            <img src="assets/myshortstay/rotterdammywork.jpg">
+                            <a class="button-work" href="myWork/myshortstay.html">
+                                <figcaption>
+                                    <h2>MyshortstayRotterdam</h2>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a id="websiteButton" href="#">Website</a>
+
+                            <img src="assets/asiandam/asiandammywork.jpg">
+                            <a class="button-work" href="myWork/asiandam.html">
+                                <figcaption>
+                                    <h2>AsianDam</h2>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a id="websiteButton" href="#">Website</a>
+
+                            <img src="assets/jpop/jpopmywork.jpg">
+                            <a class="button-work" href="myWork/jpop.html">
+                                <figcaption>
+                                    <h2>Jpop</h2>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a id="designButton" href="#">Design</a>
+
+                            <img src="assets/captionedfestival/concept.jpg">
+                            <a class="button-work" href="myWork/captionedfestival.html">
+                                <figcaption>
+                                    <h2>Captioned Festival</h2>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a id="applicationButton" href="#">Application</a>
+
+                            <img src="assets/pokemonFighter/pokemonfighter.JPG">
+                            <a class="button-work" href="myWork/pokemonfighter.html">
+                                <figcaption>
+                                    <h2>Pokemon Fighter</h2>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+                    <!--
+                    <li>
+                        <figure>
+                            <a id="designButton" href="#">UX Design</a>
+
+                            <img src="assets/pinqponq/pinqponq.JPG">
+                            <a class="button-work" href="myWork/pinqponq.html">
+                                <figcaption>
+                                    <h2>Pinq Ponq</h2>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li> -->
+                </ul>
+            </section>
+        
+            <div id="contact-section">
+                <section>
+                    <div class="container">
+                        <h1>Soon to come..!</h1>
+                    </div>
+                    
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-section-1">
+                <p>
+                    jessyjames186@gmail.com
+                    <br>
+                    +316 - 2410 9099
+                </p>
+                <p>
+                    Netherlands
+                    Groenelaantje 52
+                    <br>
+                    1815 VA Alkmaar
+                </p>
+            </div>
+            <div class="footer-section-1">
+                <small>&copy;JJP</small>
+            </div>
+        </footer>                     
+    </body>
+</html>
+            

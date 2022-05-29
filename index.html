@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>JJP - Home</title>
+        
+        <script>
+           function openSlideMenu(){
+        document.getElementsByTagName('header')[0].style.alignItems = 'unset';
+        document.getElementsByTagName('header')[0].style.padding = '0';
+        document.getElementsByTagName('nav')[0].style.width = '22%';
+        document.getElementsByTagName('nav')[0].style.display = 'flex';
+        document.getElementById('nav-logo').style.margin = '68px -300%';
+    }
+  function closeSlideMenu(){
+    document.getElementsByTagName('header')[0].style.alignItems = 'center';
+    document.getElementsByTagName('header')[0].style.padding = '55px 5%';
+    document.getElementsByTagName('nav')[0].style.width = '0';
+    document.getElementsByTagName('nav')[0].style.display = 'none';
+document.getElementById('nav-logo').style.margin = '0';
+  }
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <span>
+                <a onclick="openSlideMenu()">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </span>
+            <nav>
+                  <i onclick="closeSlideMenu()" class="fas fa-angle-double-left close"></i>
+
+                 <ul>
+
+                     <li>
+                        <a href="index.html">Home</a>
+                     </li>
+                     <li>
+                         <a href="mywork.html">My work</a>
+                     </li>
+                     <li>
+                         <a href="contact.html">Contact</a>
+                     </li>
+                 </ul>
+            </nav>
+            <a href="#">
+            <img id="nav-logo" src="assets/navbar-logo-1.png">
+            </a>
+        </header>
+        <main>
+            <header>
+                <div class="yes">
+                    <h1> Jessy James Pasay</h1>
+                        <h1>Application Developer </h1>
+                        <a class="button-1" href="mywork.html">My work </a>
+                </div>
+            </header>  
+            <section>         
+                <article>
+                    <h2> About me. </h2>
+                    <p>
+                        Hi there, thanks for stopping by. My name is Jessy :) A 20 year old still living with his parents.. haha... My passion is building and designing websites, logo's and pretty much anything around it, that may seem interesting to me. As of right now, I'm attending the "Hoge school van Amsterdam" where I study Communication and Multimedia design. Currently in my first year, still full with motivation and inspiration. In my free time I enjoy doing design commissions for friends and family, playing videogames or reading Japanese novels/manga. As you'll see in my designs, I love to make sleek and minimalistic designs. As in my opinion, clarity is everything. 
+                    </p>
+                </article>         
+                <aside>
+                    <img src="assets/centraal-buiten-1.JPG">
+                    <a class="button-1"  href="assets/JessyJamesPasayCV.pdf" download="JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >my resumé </a>
+                </aside>
+            </section>      
+            <div id="section-tools">            
+                <section>
+                    <h2>
+                        Tools that i use
+                    </h2>
+                    <div class="icon-list">
+                        <i class="fab fa-facebook-square"></i>                           
+                        <i class="fab fa-google-plus-square"></i>
+                        <i class="fab fa-whatsapp-square"></i>     
+                    </div>    
+                    <div class="personal-list">
+                        <ul>
+                            <li>Html</li>
+                            <li>INDESIGN</li>
+                            <li>Photoshop</li>
+                            <li>Laravel</li>
+                        </ul>
+                        <ul>
+                            <li>CSS</li>
+                            <li>PHP</li>
+                            <li>Mysql</li>
+                            <li>Modx</li>
+                        </ul>
+                    </div>
+                </section>
+                <section> 
+                    <h2>
+                        Things i like
+                    </h2>
+                    <div class="personal-list">
+                        <ul>
+                            <li>Windows</li>
+                            <li>Firefox</li>
+                            <li>Crunchyroll</li>
+                            <li>Orchestral</li>               
+                        </ul>
+                        <ul>
+                            <li>Mac</li>
+                            <li>Chrome</li>
+                            <li>Netflix</li>
+                            <li>Rap</li>
+                        </ul>
+                    </div>
+                    <div class="icon-list">
+                        <i class="fab fa-discord"></i>
+                        <i class="fab fa-github"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </section>  
+            </div> 
+            <section>
+                <h2>Featured work</h2>
+                    <ul>
+                        <li>
+
+                            <aside>
+                                <figure>
+                                    <img src="assets/jpopmywork.jpg">
+                                    <a class="button-work" href="myWork/jpop.html">
+                                        <figcaption>
+                                            <h3>Jpop</h3>
+                                        </figcaption>
+                                    </a>
+                                </figure>
+                            </aside>
+                        </li>
+                        <li>
+                        
+                            <aside>
+                                <figure>
+                                    <img src="assets/asiandamfrontpage.jpg">
+                                    <a class="button-work" href="myWork/asiandam.html">
+                                        <figcaption>
+                                            <h3>AsianDam</h3>
+                                        </figcaption>
+                                    </a>
+                                </figure>
+                            </aside>
+                        </li>
+                        </ul>
+                        <ul>
+                        <li>
+                        
+                            <aside>
+                                <figure>
+                                    <img src="assets/jessyss.JPG">
+                                    <a class="button-work" href="myWork/jessys.html">
+                                        <figcaption>
+                                            <h3>Jessy's</h3>
+                                        </figcaption>
+                                    </a>
+                                </figure>
+                            </aside>
+                        </li>
+                        <li>
+                        
+                            <aside>
+                                <figure>
+                                    <img src="assets/rotterdammywork.jpg">
+                                    <a class="button-work" href="myWork/myshortstay.html">
+                                        <figcaption>
+                                            <h3>MyshortstayRotterdam</h3>
+                                        </figcaption>
+                                    </a>
+                                </figure>
+                            </aside>
+                        </li>
+                    </ul>
+            
+                    <a class="button-1" href="index.php?id=4#">more work</a>
+            </section>
+            <div id="contact-section">
+                <section>
+                    <div class="container">
+                        <h1>Give me a call or Email me.</h1>
+                    </div>
+                    <div class="container">
+                        <a href="contact.html">
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script>
+            window.addEventListener('scroll', reveal);
+            function reveal(){
+              var reveals = document.querySelectorAll('.reveal');
+            
+              for(var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 100;
+            
+                if(revealtop < windowheight - revealpoint){
+                  reveals[i].classList.add('active');
+                }
+                else {
+                }
+              }
+            }
+            </script>
+        <footer>
+            <div class="footer-section-1">
+                <p>
+                    jessyjames186@gmail.com
+                    <br>
+                    +316 - 2410 9099
+                </p>
+                <p>
+                    Netherlands
+                    Groenelaantje 52
+                    <br>
+                    1815 VA Alkmaar
+                </p>
+            </div>
+            <div class="footer-section-1">
+                <small>&copy;JJP</small>
+            </div>
+        </footer>                     
+    </body>
+</html>
+            
+            
+            
