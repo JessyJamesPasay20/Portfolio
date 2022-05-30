@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link rel="icon" type="image/png" sizes="35x35" href="../assets/favicon-35x35.png">
+        <link rel="icon" type="image/png" sizes="15x15" href="../assets/favicon-15x15.png">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,6 +27,22 @@
     document.getElementsByTagName('nav')[0].style.display = 'none';
 document.getElementById('nav-logo').style.margin = '0';
   }
+  window.addEventListener('scroll', reveal);
+            function reveal(){
+              var reveals = document.querySelectorAll('.reveal');
+            
+              for(var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 100;
+            
+                if(revealtop < windowheight - revealpoint){
+                  reveals[i].classList.add('active');
+                }
+                else {
+                }
+              }
+            }
         </script>
 
     </head>
@@ -86,7 +104,7 @@ document.getElementById('nav-logo').style.margin = '0';
                             My task was to design and build a website that can help these foreign students with finding a home in Rotterdam.
                             
                             </p>
-                            <a class="button-1" href="https://www.myshortstayrotterdam.com">Visit</a>
+                            <a class="button-1 reveal" href="https://www.myshortstayrotterdam.com">Visit</a>
                             </article>         
                         </div>
                     <aside>
@@ -96,7 +114,7 @@ document.getElementById('nav-logo').style.margin = '0';
                         </figure>
                     </aside>
                 </section>     
-                <div id="websiteImageSection">
+                <div id="websiteImageSection" class="reveal">
                     <figure>
                         <img src="../assets/myshortstay/mobile-1.png">
                         <figcaption></figcaption>
@@ -110,10 +128,10 @@ document.getElementById('nav-logo').style.margin = '0';
                         <figcaption></figcaption>
                     </figure>
                 </div> 
-                <div id="contact-section">
+                <div id="contact-section" class="reveal">
                     <section>
                         <div class="container">
-                            <h1>Give me a call or Email me.</h1>
+                            <h2>Give me a call or Email me.</h2>
                         </div>
                         <div class="container">
                             <a href="../contact.html">

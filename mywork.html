@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link rel="icon" type="image/png" sizes="35x35" href="assets/favicon-35x35.png">
+        <link rel="icon" type="image/png" sizes="15x15" href="assets/favicon-15x15.png">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,6 +27,22 @@
     document.getElementsByTagName('nav')[0].style.display = 'none';
 document.getElementById('nav-logo').style.margin = '0';
   }
+  window.addEventListener('scroll', reveal);
+            function reveal(){
+              var reveals = document.querySelectorAll('.reveal');
+            
+              for(var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 100;
+            
+                if(revealtop < windowheight - revealpoint){
+                  reveals[i].classList.add('active');
+                }
+                else {
+                }
+              }
+            }
         </script>
 
     </head>
@@ -59,55 +77,19 @@ document.getElementById('nav-logo').style.margin = '0';
             <header>
                 <div class="yes">
                     <h1> My work</h1>
-                                <a class="button-1"  href="assets/images/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >my resumé </a>
+                    <a class="button-1"  href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >my resumé </a>
                 </div>
             </header>  
             <section>
-                <ul>
+                <ul >
                     <li>
                         <figure>
-                            <a id="designButton" href="#">Design</a>
+                            <a id="applicationButton" href="#">Application</a>
 
-                            <img src="assets/jessys/jesssysmywork.JPG">  
-                            <a class="button-work" href="myWork/jessys.html">
+                            <img src="assets/pokemonFighter/myWork.png">
+                            <a class="button-work" href="myWork/pokemonfighter.html">
                                 <figcaption>
-                                    <h2>Jessy's</h2>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a id="websiteButton" href="#">Website</a>
-
-                            <img src="assets/myshortstay/rotterdammywork.jpg">
-                            <a class="button-work" href="myWork/myshortstay.html">
-                                <figcaption>
-                                    <h2>MyshortstayRotterdam</h2>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a id="websiteButton" href="#">Website</a>
-
-                            <img src="assets/asiandam/asiandammywork.jpg">
-                            <a class="button-work" href="myWork/asiandam.html">
-                                <figcaption>
-                                    <h2>AsianDam</h2>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a id="websiteButton" href="#">Website</a>
-
-                            <img src="assets/jpop/jpopmywork.jpg">
-                            <a class="button-work" href="myWork/jpop.html">
-                                <figcaption>
-                                    <h2>Jpop</h2>
+                                    <h2>Pokemon Fighter</h2>
                                 </figcaption>
                             </a>
                         </figure>
@@ -116,7 +98,7 @@ document.getElementById('nav-logo').style.margin = '0';
                         <figure>
                             <a id="designButton" href="#">Design</a>
 
-                            <img src="assets/captionedfestival/concept.jpg">
+                            <img src="assets/captionedfestival/myWork.png">
                             <a class="button-work" href="myWork/captionedfestival.html">
                                 <figcaption>
                                     <h2>Captioned Festival</h2>
@@ -124,14 +106,52 @@ document.getElementById('nav-logo').style.margin = '0';
                             </a>
                         </figure>
                     </li>
+                
+                    <li >
+                        <figure>
+                            <a id="websiteButton" href="#">Website</a>
+
+                            <img src="assets/asiandam/myWork.png">
+                            <a class="button-work" href="myWork/asiandam.html">
+                                <figcaption>
+                                    <h2>AsianDam</h2>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+                    <li >
+                        <figure>
+                            <a id="websiteButton" href="#">Website</a>
+
+                            <img src="assets/jpop/Mywork.png">
+                            <a class="button-work" href="myWork/jpop.html">
+                                <figcaption>
+                                    <h2>Jpop</h2>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+                    <li >
+                        <figure>
+                            <a id="designButton" href="#">Design</a>
+
+                            <img src="assets/jessys/myWork.png">  
+                            <a class="button-work" href="myWork/jessys.html">
+                                <figcaption>
+                                    <h2>Jessy's</h2>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+                        
                     <li>
                         <figure>
-                            <a id="applicationButton" href="#">Application</a>
+                            <a id="websiteButton" href="#">Website</a>
 
-                            <img src="assets/pokemonFighter/pokemonfighter.JPG">
-                            <a class="button-work" href="myWork/pokemonfighter.html">
+                            <img src="assets/myshortstay/myWork.png">
+                            <a class="button-work" href="myWork/myshortstay.html">
                                 <figcaption>
-                                    <h2>Pokemon Fighter</h2>
+                                    <h2>MyshortstayRotterdam</h2>
                                 </figcaption>
                             </a>
                         </figure>
@@ -152,10 +172,10 @@ document.getElementById('nav-logo').style.margin = '0';
                 </ul>
             </section>
         
-            <div id="contact-section">
+            <div id="contact-section" class="reveal">
                 <section>
                     <div class="container">
-                        <h1>Soon to come..!</h1>
+                        <h2>Soon to come..!</h2>
                     </div>
                     
                 </section>
