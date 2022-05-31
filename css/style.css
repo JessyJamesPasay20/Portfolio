@@ -25,7 +25,7 @@ body {
 }
 h1 {font-size: 3.5vw;}
 h2 {
-    color: slateblue;padding-bottom: 1em;
+    padding-bottom: 1em;
     letter-spacing: 2px;
     font-size: 4em;
     color: #ffbf26;
@@ -153,82 +153,19 @@ main > section:nth-of-type(1) aside img {
    }
 main > section:nth-of-type(1) aside img {width: 327px;height: 470px;position: relative;transform: skew(-2deg);}
 
-#section-tools {
-    margin: 9vw 5vw;
-    display: flex;
-    flex-direction: column;
-    /* padding: 4em 8vw; */
-    background: #ffbf26;
-    filter: drop-shadow(-20px 20px 0px slateblue);
-    
-    border: 8px solid #151515;
-   max-width: 1500px;justify-content: center;align-items: center;}
-   #section-tools .icon-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-   min-width: 300px;max-width: 350px;margin: 1em 0.5em 1em 0.5em;}
-   
-   #section-tools .icon-list i {
-    padding: 3vw;
-    font-size: 1.8em;
-    color: #6a5acd;
-    filter: drop-shadow(2px 2px 0px white);
-   }
-   
-   #section-tools section {
-    display: flex;
-    height: 50%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap-reverse;
-    
-    
-   }
-   
-   #section-tools h2 {
-    align-items: center;
-    order: 3;
-    
-    font-family: 'Staatliches', cursive;
-    
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    font-size: 3em;
-    
-    color: #151515;
-   max-width: 400px;min-width: 300px;margin: 1em 0 1em 0;padding: 0;}
-   
-   #section-tools .personal-list {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    order: 2;
-    padding-bottom: 1em;
-    flex: 1;
-   max-width: 400px;width: 100%;min-width: 300px;margin: 1em 0.5em 1em 0.5em;}
-   
-#section-tools section:nth-of-type(1) {order: 2;margin: 1em 0 5em 0;}
-#section-tools ul {
-    list-style: japanese-formal inside;
-    max-width: 123px;
-    
-    color: #1a1a1a;
-    font-size: 15px;
-   }
-#section-tools section:nth-of-type(1) ul:nth-of-type() {} 
-#section-tools section:nth-of-type(1) ul li {}
+#section-tools {margin: 9vw 5vw;display: flex;flex-direction: column;padding: 4em 0vh;border: 8px solid #151515;max-width: 1500px;justify-content: center;align-items: center;background: #ffbf26;filter: drop-shadow(-20px 20px 0px slateblue);}#section-tools .icon-list {display: flex;justify-content: center;align-items: center;flex: 1;min-width: 300px;max-width: 350px;margin: 1em 0.5em 1em 0.5em;}
+#section-tools .icon-list i {padding: 3vw;font-size: 1.8em;color: #6a5acd;filter: drop-shadow(2px 2px 0px white);}
+#section-tools .container { display: flex;justify-content: center;align-items: center;flex-wrap: wrap-reverse;order: inherit;}
+#section-tools section {display: flex;height: 50%;flex-direction: row;justify-content: center;flex-wrap: wrap-reverse;}
+#section-tools h2 {align-items: center;order: 3;font-family: 'Staatliches', cursive;display: flex;flex: 1;justify-content: center;font-size: 3em;color: #151515;max-width: 400px;min-width: 300px;margin: 1em 0 1em 0;padding: 0;}
+#section-tools .personal-list {display: flex;justify-content: space-evenly;align-items: center;order: 2;padding-bottom: 1em;flex: 1;max-width: 400px;width: 100%;min-width: 300px;margin: 1em 0.5em 1em 0.5em;}
+#section-tools section:nth-of-type(1) {order: 2;margin: 2em 0;}
+#section-tools ul {list-style: japanese-formal inside;max-width: 123px;color: #1a1a1a;font-size: 15px;}
 
+#section-tools section:nth-of-type(2) {flex-wrap: wrap;order: 1;}
 #section-tools section:nth-of-type(2) .icon-list {order: 3;}
-#section-tools section:nth-of-type(2) {flex-wrap: wrap;order: 1;margin: 5em 0 1em 0;}
 #section-tools section:nth-of-type(2) h2{order: 1;}
-#section-tools section:nth-of-type(2) .personal-list {}
-#section-tools section:nth-of-type(2) ul {}
-#section-tools section:nth-of-type(2) ul li {}
 #section-tools section:nth-of-type(2) ul:nth-of-type(2) {text-decoration: line-through 2px #1a1a1a;color: #8e8e8e;}
-#section-tools section:nth-of-type(2) ul:nth-of-type(2) li {}
 
 main > section:nth-of-type(2) {
     display: flex;
@@ -580,3 +517,32 @@ width: 100%;}
     
     
         order: 2;padding: 0 2vw;display: flex;justify-content: center;flex: 1 0 50%;}
+
+
+@media only screen and (max-width: 900px){
+    
+
+    /* section tools */
+    #section-tools {
+        max-width: 500px;
+        margin: 15vw auto;
+    }
+    #section-tools .personal-list {
+        flex:none;
+    }
+    #section-tools section:nth-of-type(2) .container {
+        flex-wrap: wrap;
+    }
+       
+}
+
+@media only screen and (max-width: 600px){
+    /* Index section 1 ( about me ) */
+    main > section:nth-of-type(1) aside img {transform: skew(0deg);}
+  
+
+    /* Index section 2 ( Tools ) */
+    #section-tools {filter: none;border: none;border-radius: 4px;}
+    
+       
+}
