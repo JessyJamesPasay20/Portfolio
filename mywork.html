@@ -12,65 +12,66 @@
 
         <title>JJP - Mywork</title>
         
+       
         <script>
-           function openSlideMenu(){
-        document.getElementsByTagName('header')[0].style.alignItems = 'unset';
-        document.getElementsByTagName('header')[0].style.padding = '0';
-        document.getElementsByTagName('nav')[0].style.width = '22%';
-        document.getElementsByTagName('nav')[0].style.display = 'flex';
-        document.getElementById('nav-logo').style.margin = '68px -300%';
-    }
-  function closeSlideMenu(){
-    document.getElementsByTagName('header')[0].style.alignItems = 'center';
-    document.getElementsByTagName('header')[0].style.padding = '55px 5%';
-    document.getElementsByTagName('nav')[0].style.width = '0';
-    document.getElementsByTagName('nav')[0].style.display = 'none';
-document.getElementById('nav-logo').style.margin = '0';
-  }
-  window.addEventListener('scroll', reveal);
-            function reveal(){
-              var reveals = document.querySelectorAll('.reveal');
-            
-              for(var i = 0; i < reveals.length; i++) {
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 100;
-            
-                if(revealtop < windowheight - revealpoint){
-                  reveals[i].classList.add('active');
-                }
-                else {
-                }
-              }
-            }
-        </script>
-
-    </head>
-    <body>
-        <header>
-            <span>
-                <a onclick="openSlideMenu()">
-                    <i class="fas fa-bars"></i>
-                </a>
-            </span>
-            <nav>
-                  <i onclick="closeSlideMenu()" class="fas fa-angle-double-left close"></i>
-
-                 <ul>
-
-                     <li>
-                        <a href="index.html">Home</a>
-                     </li>
-                     <li>
-                         <a href="mywork.html">My work</a>
-                     </li>
-            
-                 </ul>
-            </nav>
-            <a href="index.html">
-            <img id="nav-logo" src="assets/navbar-logo-1.png">
-            </a>
-        </header>
+            function openSlideMenu(){
+         document.getElementsByTagName('header')[0].style.alignItems = 'unset';
+         document.getElementsByTagName('header')[0].style.padding = '0';
+         document.getElementsByTagName('nav')[0].style.width = '100%';
+         document.getElementsByTagName('nav')[0].style.display = 'flex';
+         document.getElementById('nav-logo').style.margin = '68px -300%';
+     }
+   function closeSlideMenu(){
+     document.getElementsByTagName('header')[0].style.alignItems = 'center';
+     document.getElementsByTagName('header')[0].style.padding = '55px 5%';
+     document.getElementsByTagName('nav')[0].style.width = '0';
+     document.getElementsByTagName('nav')[0].style.display = 'none';
+ document.getElementById('nav-logo').style.margin = '0';
+ 
+   }
+   window.addEventListener('scroll', reveal);
+             function reveal(){
+               var reveals = document.querySelectorAll('.reveal');
+             
+               for(var i = 0; i < reveals.length; i++) {
+                 var windowheight = window.innerHeight;
+                 var revealtop = reveals[i].getBoundingClientRect().top;
+                 var revealpoint = 100;
+             
+                 if(revealtop < windowheight - revealpoint){
+                   reveals[i].classList.add('active');
+                 }
+                 else {
+                 }
+               }
+             }
+         </script>
+ 
+     </head>
+     <body>
+         <header>
+             <span>
+                 <a onclick="openSlideMenu()">
+                     <i class="fas fa-bars"></i>
+                 </a>
+             </span>
+             <nav>
+                   <i onclick="closeSlideMenu()" class="fa-solid fa-xmark close"></i>
+                  <ul>
+ 
+                      <li>
+                         <a href="index.html">Home</a>
+                      </li>
+                      <li>
+                          <a href="mywork.html">My work</a>
+                      </li>
+                     
+                  </ul>
+             </nav>
+             <a href="#">
+             <img id="nav-logo" src="assets/navbar-logo-1.png">
+             </a>
+         </header>
         <main id="mywork">
             <header>
                 <div class="yes">
@@ -78,7 +79,7 @@ document.getElementById('nav-logo').style.margin = '0';
                     <a class="button-1"  href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >my resumé </a>
                 </div>
             </header>
-            <section id="filterButtons">
+            <!--<section id="filterButtons">
                 <h2>portfolio</h2>
                 <ul>
                     <li>
@@ -91,217 +92,192 @@ document.getElementById('nav-logo').style.margin = '0';
                         <button> application </button>
                     </li>
                 </ul>
-            </section>  
+            </section>-->
+              
             <section>
-                <ul >
+                <ul class="reveal">
                     <li>
-                        <figure>
+                         <figure>
+                            <a href="myWork/AutoDiskRewind.html"></a>
+                             <img src="./assets/autodisk/autodisk-mockup2.jpg" alt="An image showing mobile images of the website AutoDisk">
+                         </figure>
+                         <div class="tags">
                             <a id="applicationButton" href="#">Application</a>
-
-                            <img src="assets/ah/ah-mockup.png">
-                            <a class="button-work" href="myWork/ahdeals.html">
-                                <figcaption>
-                                    <h2>Albert Heijn Deals</h2>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </figcaption>
-                            </a>
-                        </figure>
+                         </div>
+                         <div>
+                             <h3>AutoDisk Rewind</h3>
+                          
+                             <i class="fa-solid fa-arrow-right"></i>
+                         </div>
+                         
                     </li>
-                    <li>
+                    <li class="reveal">
                         <figure>
+                            <a href="myWork/jpop.html"></a>
+                            <img src="./assets/jpop/jpop-mockup2.jpg" alt="An image showing mobile images of the website AutoDisk">
+                        </figure>
+                        <div class="tags">
                             <a id="applicationButton" href="#">Application</a>
-
-                            <img src="assets/autodisk/autodisk-mockup.png">
-                            <a class="button-work" href="myWork/AutoDiskRewind.html">
-                                <figcaption>
-                                    <h2>AutoDisk Rewind</h2>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a id="applicationButton" href="#">Application</a>
-
-                            <img src="assets/pokemonfighter/myWork.png">
-                            <a class="button-work" href="myWork/pokemonfighter.html">
-                                <figcaption>
-                                    <h2>Pokemon Fighter</h2>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a id="designButton" href="#">Design</a>
-
-                            <img src="assets/captionedfestival/myWork.png">
-                            <a class="button-work" href="myWork/captionedfestival.html">
-                                <figcaption>
-                                    <h2>Captioned Festival</h2>
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                
-                    <li >
-                        <figure>
-                            <a id="websiteButton" href="#">Website</a>
-
-                            <img src="assets/asiandam/myWork.png">
-                            <a class="button-work" href="myWork/asiandam.html">
-                                <figcaption>
-                                    <h2>AsianDam</h2>
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                    <li >
-                        <figure>
-                            <a id="websiteButton" href="#">Website</a>
-
-                            <img src="assets/jpop/Mywork.png">
-                            <a class="button-work" href="myWork/jpop.html">
-                                <figcaption>
-                                    <h2>Jpop</h2>
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                    <li >
-                        <figure>
-                            <a id="designButton" href="#">Design</a>
-
-                            <img src="assets/jessys/myWork.png">  
-                            <a class="button-work" href="myWork/jessys.html">
-                                <figcaption>
-                                    <h2>Jessy's</h2>
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
+                         </div>
+                        <div>
+                            <h3>Jpop</h3>
+                            
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
                         
-                    <li>
-                        <figure>
-                            <a id="websiteButton" href="#">Website</a>
-
-                            <img src="assets/myshortstay/myWork.png">
-                            <a class="button-work" href="myWork/myshortstay.html">
-                                <figcaption>
-                                    <h2>MyshortstayRotterdam</h2>
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </figcaption>
-                            </a>
-                        </figure>
+                   </li>
+                   <li class="reveal">
+                    <figure>
+                        <a href="myWork/ahdeals.html"></a>
+                        <img src="assets/ah/ah-mockup.jpg">
+                    </figure>
+                    <div class="tags">
+                        <a id="applicationButton" href="#">Application</a>
+                     </div>
+                    <div>
+                        <h3>Albert Heijn Deals</h3>
+                        
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    
+               </li>
+               <li class="reveal">
+                <figure>
+                    <a href="myWork/pokemonfighter.html"></a>
+                    <img src="assets/pokemonfighter/myWork.jpg">
+                </figure>
+                <div class="tags">
+                    <a id="applicationButton" href="#">Application</a>
+                 </div>
+                <div>
+                    <h3>Pokemon Fighter</h3>
+                    
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                
+                </li>
+                <li class="reveal">
+                    <figure>
+                        <a href="myWork/captionedfestival.html"></a>
+                        <img src="assets/captionedfestival/myWork.jpg">
+                    </figure>
+                    <div class="tags">
+                        <a id="applicationButton">Application</a>
+                     </div>
+                    <div>
+                        <h3>Captioned Festival</h3>
+                        
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    
                     </li>
-                    <!--
-                    <li>
+                    <li class="reveal">
                         <figure>
-                            <a id="designButton" href="#">UX Design</a>
-
-                            <img src="assets/pinqponq/pinqponq.JPG">
-                            <a class="button-work" href="myWork/pinqponq.html">
-                                <figcaption>
-                                    <h2>Pinq Ponq</h2>
-                                </figcaption>
-                            </a>
+                            <a href="myWork/asiandam.html"></a>
+                            <img src="assets/asiandam/myWork.jpg">
                         </figure>
-                    </li> -->
-                    <li>
-                        <figure>
-                            <a id="websiteButton" href="#">Website</a>
-
-                            <img src="assets/mappa/mappa-mockup.png">
-                            <a class="button-work" href="myWork/mappa.html">
-                                <figcaption>
-                                    <h2>Mappa</h2>
+                        <div class="tags">
+                            <a id="applicationButton" href="#">Application</a>
+                         </div>
+                        <div>
+                           <h3>AsianDam</h3>
+                            
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        
+                        </li>
+                       
+                            <li class="reveal">
+                                <figure>
+                                    <a href="myWork/mappa.html"></a>
+                                    <img src="assets/mappa/mappa-mockup.jpg">
+                                </figure>
+                                <div class="tags">
+                                    <a id="applicationButton" href="">Application</a>
+                                 </div>
+                                <div>
+                                    <h3>Mappa</h3>
+                                    
                                     <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                
+                                </li>
 
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a id="websiteButton" href="#">Design</a>
-
-                            <img src="assets/aniplay/aniplay-mockup.png">
-                            <a class="button-work" href="myWork/aniplay.html">
-                                <figcaption>
-                                    <h2>Aniplay</h2>
+                                <li class="reveal">
+                                <figure>
+                                    <a href="myWork/aniplay.html"></a>
+                                    <img src="assets/aniplay/aniplay-mockup.jpg">
+                                </figure>
+                                <div class="tags">
+                                    <a id="applicationButton" href="myWork/aniplay.html">Application</a>
+                                 </div>
+                                <div>
+                                    <h3>Aniplay</h3>
+                                    
                                     <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                
+                                </li>
 
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a id="websiteButton" href="#">Design</a>
+                             
 
-                            <img src="assets/ibegyou/ibegyou-mockup.png">
-                            <a class="button-work" href="myWork/ibegyou.html">
-                                <figcaption>
-                                    <h2>I beg you - Lyrics</h2>
-                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <li class="reveal">
+                                        <figure>
+                                            <a href="myWork/ibegyou.html"></a>
+                                            <img src="assets/ibegyou/ibegyou-mockup.jpg">
+                                        </figure>
+                                        <div class="tags">
+                                            <a id="applicationButton" href="">Application</a>
+                                         </div>
+                                        <div>
+                                            <h3>I beg you - Lyrics</h3>
+                                            
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        
+                                        </li>
+                 </ul>
 
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </li>
-                </ul>
+                        
             </section>
         
             <div id="contact-section" class="reveal">
-                <section>
-                    <div class="container">
-                        <h2>Soon to come..!</h2>
-                    </div>
-                    
-                </section>
-            </div>
-        </main>
-        <footer>
-            <div class="footer-section footer-section-1">
-                <p>
-                    2023
-                </p>
+                
+                <h2> Piqued <div>Your</div> <div>Interest?</div></h2>
             
-                <small>&copy;JJP</small>
-            </div>
-            <div class="footer-section footer-section-2">
-                <a href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
-                    <i class="fa-solid fa-arrow-right"></i>
+         </div>
+     </main>
+     <footer>
+         <div class="footer-container">
+             <p>
+                 2023
+             </p>
+     
+         <div class="footer-social">
+             <a href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
+                 <i class="fa-solid fa-arrow-right"></i>
 
-                    <p>resumé </p>
-                </a>
-                <a href="https://www.linkedin.com/in/jessyjamespasay/">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>linkedin</p>
-                </a>
-                <a href="tel:+31624109099">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Phone</p>
-                </a>
-                <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Email</p>
-                </a>
-            </div>
-        </footer>                             
-    </body>
-    <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
-
+                 <p>resumé </p>
+             </a>
+             <a href="https://www.linkedin.com/in/jessyjamespasay/">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>linkedin</p>
+             </a>
+             <a href="tel:+31624109099">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Phone</p>
+             </a>
+             <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Email</p>
+             </a>
+         </div>
+         <small>&copy;JJP</small>
+     </div>
+     </footer>                             
+ </body>
+ <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
 </html>
-            
+         
+         
+         

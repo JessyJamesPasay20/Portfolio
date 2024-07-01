@@ -39,10 +39,8 @@ h2 {
     line-height: 1.5;
  }
 
- main section:nth-of-type(1) h2::before {content: "01";color: white;display: flex;font-size: .5em; }
- main section:nth-of-type(2) h2::before {content: "02";color: white;display: flex;font-size: 0.35em; line-height: 0.1;}
- main section:nth-of-type(3) h2::before {content: "03";color: white;display: flex;font-size: .5em; line-height: 0.4;}
- main section:nth-of-type(4) h2::before {content: "04";color: white;display: flex;font-size: .5em; line-height: 0.1;}
+ main h2::before {content: attr(chapter-number) ;color: white;display: flex;font-size: 30px; line-height: 0.3;}
+ 
  main section:last-child h2::before {display: none;}
 
 #nav-logo { width: 30px; padding: 0; }
@@ -50,7 +48,15 @@ nav {margin-left: 0; height: 100%; width: 0; position: fixed; z-index: 3;backgro
 nav ul {list-style: none;display: flex;justify-content: center;align-items: center;flex-direction: column;}
 nav a, .close {display: block; font-size: 5em;text-decoration: none;color: #151515;transition: .5s ease;font-family: 'Staatliches', cursive;}
 nav a:hover, .close:hover {color:slateblue;text-decoration: none;letter-spacing: 3px;/*! transform: scale(1, 1.2); */text-decoration-thickness: 3px;}
-nav .close {position: absolute;top: 0;right: 22px;margin-left: 50px;font-size: 30px; transition: all .7s;}
+nav .close {position: absolute;
+  top: 5%;
+  left: 2%;
+  margin-left: 50px;
+  font-size: 50px;
+  transition: all .7s;}
+  nav .close:hover {
+    transform: rotate(360deg);
+  }
 
 body > header {display: flex;justify-content: space-between;z-index: 2;position: absolute;right: 0;left: 0;transition: .5s ease all;padding: 55px 5%;}
 
@@ -63,15 +69,20 @@ main header h1 {
     display: inline-block;
     transform: skew(0deg);
     font-size: 8vw;
-    max-width: 735px;
+    max-width: 1200px;
     line-height: 1;
     color: #FFBF26;
    }
-   main header .designContainer > div{font-size: 79px;font-family: 'Staatliches', cursive;line-height: 1.1;color: #6A5ACD;}
+   main header .designContainer > div{font-size: 5vw;font-family: 'Staatliches', cursive;line-height: 1.1;color: #6A5ACD;}
 
-   main header .designContainer h1 {}
+   main header .designContainer h1 {
+    background: linear-gradient(144deg, rgba(252,189,43,1) 0%, rgba(106,90,205,1) 58%);
+    background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   }
 
-   main header .yes > h1 { -webkit-text-stroke: 1px #6A5ACD;color: #151515;}
+   main header .yes > h1 { -webkit-text-stroke: 1px #6A5ACD;color: #151515;display: flex;flex-direction: column;line-height: .8;font-size: 8vw;}
 
 header .yes {
     
@@ -81,14 +92,14 @@ header .yes {
     padding: 0 0vw;
     align-items: baseline;
     
-    margin: 4em 0;
+    margin: 5em 0;
    }
 
 
    main header {width: 100%;display: flex;flex-direction: column; height: 100vh;
 justify-content: center; align-items: center;
 }
-body > header:nth-child(1) { position: fixed;right: 0;left: 0;}
+body > header:nth-child(1) { /*position: fixed;*/right: 0;left: 0;}
    header .yes > div {
     display: flex;
     flex-wrap: wrap;
@@ -107,21 +118,43 @@ body > header:nth-child(1) { position: fixed;right: 0;left: 0;}
    color: white;
      
    }
-.button-1 {
-    padding: 0.9em 2.8em;
+   #button-row {}
+   .button-1 {
+    padding: .9em 2.3em;
     background: #ffbf26;
     text-decoration: none;
     text-transform: uppercase;
-    color: #151515;
+    color: #1d1d1d;
     inline-size: fit-content;
     transition: .5s ease all;
+    
     margin: auto;
+    margin-right: 0;
+    font-weight: 100;
+    letter-spacing: .1px;
 }
 .button-1:hover { 
     box-shadow: 15px 15px 0px -2px #ffbf26;
     background: #6a5acd;
     color: white;
 
+}
+.button-2 {
+  padding: 0.8em 2.8em;
+  background: transparent;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  inline-size: fit-content;
+  transition: .5s ease all;
+  margin: auto;
+  border: solid 3px #6a5acd;
+  font-weight: 100;
+}
+.button-2:hover { 
+  
+  background: #6a5acd;
+  color: #ffbf26;
 }
 
 html .button-img {
@@ -147,7 +180,13 @@ main > section:nth-of-type(1) {
     grid-auto-columns: 1fr;
     padding: .625rem;
     display: grid;
+    
 }
+#index > section:nth-of-type(1) {
+  margin-bottom: clamp(20px,8vw,150px);
+}
+
+
 main > section:nth-of-type(1) article {
    
     
@@ -195,7 +234,7 @@ main > section:nth-of-type(1) aside img {max-inline-size: 330px;
 #section-tools section:nth-of-type(2) h2{order: 1;}
 #section-tools section:nth-of-type(2) ul:nth-of-type(2) {text-decoration: line-through 2px #1a1a1a;color: #8e8e8e;}
 
-main > section:nth-of-type(2) {
+main > section:nth-of-type(2), #mywork > section {
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -204,14 +243,14 @@ main > section:nth-of-type(2) {
  
   position: relative;
   max-width: 1920px;
-  margin-top: clamp(20px,11vw,160px);
+  /*! margin-top: clamp(20px,11vw,160px); */
   margin-bottom: clamp(20px,11vw,160px);
  }
  
    main > section:nth-of-type(2) h2 {padding: 0;font-size: 7em;color: #6A5ACD;}
   
 
-   main > section:nth-of-type(2) ul {
+   main > section:nth-of-type(2) ul, #mywork > section ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -248,7 +287,7 @@ main section:nth-of-type(2) h2::after {
     \}: ;
   }
 */  
-main > section:nth-of-type(2) li {
+main > section:nth-of-type(2) li, #mywork > section li {
           
   display: flex;
 flex-direction: column;
@@ -271,15 +310,52 @@ overflow: hidden;
     transform: skew(-3deg);
    }*/
    
-   main > section:nth-of-type(2) li figure {/*! width: 100%; */}
-   main > section:nth-of-type(2) li figure::after {
-    background: linear-gradient(0deg, rgba(0,0,0,0.6) 3%, rgba(0,0,0,0) 100%);
+   main > section:nth-of-type(2) li figure, #mywork > section li figure {/*! width: 100%; */}
+   main > section:nth-of-type(2) li figure a, #mywork > section li figure a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+   }
+   main:has(section:nth-of-type(2) figure a:hover) section:nth-of-type(2) li figure::after, #mywork:has(section a:hover) section figure::after{
+    
+    
+    
+   }
+   /*main:has(section:nth-of-type(2) figure a:hover) section:nth-of-type(2) li h3, #mywork:has(section a:hover) section li h3{
+    color: white;
+   }
+   main:has(section:nth-of-type(2) figure a:hover) section:nth-of-type(2) li i, #mywork:has(section a:hover) section li i{
+    
+   }
+   main:has(section:nth-of-type(2) figure a:hover) section:nth-of-type(2) li figure img, #mywork:has(section a:hover) section li figure img{
+    
+   }*/
+
+   main > section:nth-of-type(2) li:hover h3, #mywork > section li:hover h3{
+    color: white;
+    transition: .3s all ease;
+   }
+   main > section:nth-of-type(2) li:hover i, #mywork > section li:hover i{
+    color: white;
+    transition: .3s all ease;
+   }
+   main > section:nth-of-type(2) li:hover img, #mywork > section li:hover img{
+    transform: scale(1.1);
+    transition: .3s all ease-in;
+   }
+  
+   main > section:nth-of-type(2) li figure::after, #mywork > section  li figure::after {
+    background: linear-gradient(0deg, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0) 100%);
   position: absolute;
   right: 0;
   top: 0;
   left: 0;
   bottom: 0;
   content: "";
+  transition: .3s ease all;
    }
    .tags {
     position: absolute;
@@ -287,25 +363,25 @@ overflow: hidden;
   top: 0;
   right: 0;
   left: 0;
-  padding: clamp(40px,3vw,30px) clamp(20px,3vw,60px) 0 clamp(20px,3vw,60px);
+  padding: clamp(20px,3vw,60px) clamp(40px,3vw,30px) 0 clamp(20px,3vw,60px);
   display: flex;
   justify-content: right;
 
    }
-   main > section:nth-of-type(2) li figure img {width: 100%;/*! z-index: 2; */position: relative;}
-   main > section:nth-of-type(2) li  > div:last-child {
+   main > section:nth-of-type(2) li figure img, #mywork > section li figure img {transition: .3s all ease; transform: scale(1); width: 100%;/*! z-index: 2; */position: relative;}
+   main > section:nth-of-type(2) li  > div:last-child, #mywork > section li > div:last-child{
     position: absolute;
     bottom: 0;
     display: flex;
     width: 100%;
     align-items: center;
-    padding: 0 clamp(20px,3vw,60px) clamp(40px,3vw,30px) clamp(20px,3vw,60px);
+    padding: 0 clamp(20px,3vw,60px) clamp(70px,3vw,30px) clamp(20px,3vw,60px);
     pointer-events: none;
   }
-     main > section:nth-of-type(2) li > div h3 {font-size: 50px;color: white;}
+     main > section:nth-of-type(2) li > div h3, #mywork > section li > div h3 {transition: .3s ease all; font-size: 50px;color: #ffbf26; font-weight: 400;}
    main > section:nth-of-type(2) li > div > div {}
    main > section:nth-of-type(2) li > div a {}
-   main > section:nth-of-type(2) li > div i {font-size: 55px;transform: rotate(-45deg);color: white;transition: all .3s;margin-left: auto;}
+   main > section:nth-of-type(2) li > div i, #mywork > section li > div i {font-size: 55px;transform: rotate(-45deg);color: #ffbf26;transition: all .3s;margin-left: auto;}
 /*  Experience  */
 
 #experience {
@@ -317,12 +393,13 @@ overflow: hidden;
   padding: .625rem;
   display: grid;
   padding: 0 5%;
-  margin-top: clamp(20px,8vw,120px);
-  margin-bottom: clamp(20px,8vw,120px);
+  margin-top: clamp(93px,27vw,250px);
+  margin-bottom: clamp(93px,27vw,207px);
 }
 
 #experience > div > h2 {
 line-height: 1;
+font-size: 5.5em;
 }
 
  #experience > div > div {
@@ -385,14 +462,15 @@ margin-top: 0;
     justify-content: center;
     align-items: center;
     /*! margin: 9em auto; */
-    background-color: #ffbf26;
     height: 100vh;
+    background: rgb(73,75,238);
+    background: radial-gradient(circle, rgba(73,75,238,1) 0%, rgba(106,90,205,1) 100%);
    }
 
 #contact-section {display: flex;flex-direction: row;align-items: center;flex-wrap: wrap;justify-content: center;}
-#contact-section h2 {color: #151515;padding-bottom: 0;display: flex;font-size: 4em;}
-#contact-section h2 > div:nth-of-type(1) {font-family: 'Staatliches', cursive;-webkit-text-stroke: 1px #6A5ACD;font-weight: 400;color: transparent;margin: 0 0.1em;}
-#contact-section h2 > div:nth-of-type(2) {font-family: 'Staatliches', cursive;color: slateblue;}
+#contact-section h2 {color: #151515;padding-bottom: 0;display: flex;font-size: 5em;}
+#contact-section h2 > div:nth-of-type(1) {font-family: 'Staatliches', cursive;-webkit-text-stroke: 1px #FFBF26;font-weight: 400;color: transparent;margin: 0 0.1em;}
+#contact-section h2 > div:nth-of-type(2) {font-family: 'Staatliches', cursive;color: #ffbf26;}
 
 footer {
   position: absolute;
@@ -443,10 +521,10 @@ footer .footer-container {
    }
 
    footer .footer-social a:hover p{
-    color: #6A5ACD;
+    color: #151515;
    }
    footer .footer-social a:hover i{
-    color: white;
+    color: #ffbf26;
     transform: rotate(-45deg);
    }
 
@@ -454,20 +532,30 @@ footer .footer-container {
     font-size: 1.3em;
     text-transform: capitalize;
     margin-left: .5em;
-    color: #6a5acd;
+    color: #ffbf26;
     font-weight: 500;
     transition: all .2s;
 
    }
 /* detail pages */   
+
+#detail header {
+  height: 67vh;
+}
+#detail h2 { margin-bottom: 10px;
+}
 #detail header .yes {
     height: 55vh;
     
   }
-#detail  > #backButton {padding: 0 10vw;}
-#detail  > #backButton a:nth-of-type(1) {text-decoration: none;-webkit-text-stroke: 0.5px #1a1a1a;color: white;transition: ease .5s;}
-#detail  > #backButton a:nth-of-type(1)::before {content: "<";padding-right: 5px;}
-#detail  > #backButton a:nth-of-type(1):hover {color: #ffbf26; letter-spacing: 1px;}
+  #detail   #backButton {
+    padding: 0 2vw;
+    display: flex;
+    margin-bottom: 5vw;
+  }
+  #detail  #backButton a:nth-of-type(1) {text-decoration: none;-webkit-text-stroke: 0.5px #1a1a1a;color: white;transition: ease .5s;}
+#detail   #backButton a:nth-of-type(1)::before {content: "<";padding-right: 5px;}
+#detail   #backButton a:nth-of-type(1):hover {color: #ffbf26; letter-spacing: 1px;}
 
 
 
@@ -488,7 +576,7 @@ footer .footer-container {
   }
   #designButton {
     text-transform:uppercase;
-    LETTER-SPACING: 0.7PX;
+    /*! LETTER-SPACING: 0.7PX; */
     font-weight: 500;
     text-decoration: none;
     color: #1a1a1a;
@@ -500,6 +588,7 @@ footer .footer-container {
     cursor: context-menu;
     z-index: 1;
     right: 0;
+    font-weight: 100;
   }
   #applicationButton {
     text-transform:uppercase;
@@ -516,7 +605,79 @@ footer .footer-container {
     font-size: 13px;
   }
   
-#detail  > section {flex-wrap: wrap-reverse;    align-items: flex-end;margin-bottom: 1vh;padding: 4vw 0;}
+  #backButton > a:nth-of-type(1) {}
+  #backButton > a:nth-of-type(2) {}
+  #backButton > p:nth-of-type(1) {
+    margin-right: 2em;
+    color: white;
+  }
+  #backButton > p:nth-of-type(2) {
+    color: white;
+    font-weight: 100;
+  }
+  
+  #detail > section:nth-of-type(1) {padding: 0 10vw;display: flex; flex-direction: column;
+    grid-row-gap: 0;}
+  #detail > section:nth-of-type(1) > div:nth-of-type(2) {
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+  }
+    #detail > section:nth-of-type(1) article {display: flex;flex-direction: column;justify-content: left;align-items: baseline;width: 100%;max-width: 1300px;}
+  #detail > section:nth-of-type(1) article a {
+    margin: 0;
+    margin-top: clamp(20px,3vw,50px);
+    margin-bottom: clamp(20px,3vw,120px);
+  }
+    #detail > section:nth-of-type(1) div article:first-child{}
+  #detail > section:nth-of-type(1) div article:last-child{}
+  #detail > section:nth-of-type(1) article h2 {}
+  #detail > section:nth-of-type(1) article div {display: flex;justify-content: space-between;width: 100%;flex-wrap: wrap;}
+  #detail > section:nth-of-type(1) article div p {max-width: 600px;}
+  #detail > section:nth-of-type(1) article div p:first-child{flex: 1 1 45%;}
+  #detail > section:nth-of-type(1) article div p:last-child{flex: 1 1 45%;}
+
+  #detail > section:nth-of-type(1) > div img {
+    transition: .3s all ease;
+  transform: scale(1);
+  width: 100%;
+ 
+  position: relative;
+  }
+  #detail > section:nth-of-type(1) > div > div {max-width: 1300px; position: relative;
+    aspect-ratio: 16/7;
+    overflow: hidden;
+    margin-top: clamp(20px,3vw,50px);
+    margin-bottom: clamp(100px,3vw,120px);}
+  
+
+  #detail > section:nth-of-type(2) {}
+  #detail > section:nth-of-type(2) h2 {font-size: 5em;}
+  #detail > section:nth-of-type(2) > div {  width:100%;/* demo*/
+    margin:auto;/* demo*/
+    display:flex;
+    flex-wrap:wrap; 
+justify-content: space-evenly;
+column-gap: 2vw;
+}
+    #detail > section:nth-of-type(2) div > div {flex: 1;}
+  
+  #detail > section:nth-of-type(2) div > div:first-child {}
+  #detail > section:nth-of-type(2) div > div:last-child {}
+  #detail > section:nth-of-type(2) img{
+    width: 100%;
+  min-width: 200px;
+  }
+  #detail #contact-section a {}
+
+
+
+
+
+
+
+
+/*#detail  > section {flex-wrap: wrap-reverse;    align-items: flex-end;margin-bottom: 1vh;padding: 4vw 0;}
 #detail  > section aside {flex: 1 0 50%;max-height: 75vh;overflow: hidden;padding: 0 2vw;}
 #detail  > section figure { border-radius: 4px; display: flex;flex-direction: column;margin: 1.2em 0;}
 #detail  > section aside img {    max-width: 405px;border-radius: 4px;width: auto;height: auto;transform: none;filter: none;max-height: 170vh;margin: 0;}
@@ -564,7 +725,7 @@ footer .footer-container {
 #detail .seemore-section h2 {
     color: white;
 }
-
+*/
 
    /* contact */
 
@@ -618,20 +779,53 @@ form label input {
   form label:last-of-type {margin-bottom: 5vh;}
 
   /* my work */
-  #mywork { max-width: 1500px;}
+  /*#mywork { max-width: 1500px;}*/
 #mywork header {
     height: 65vh;
 }
 #mywork header {
-    height: 65vh;
+    height: 74vh;
 }
-#mywork header h1:nth-of-type(1) {
+#mywork header .yes h1:nth-of-type(1), #detail header .yes h1:nth-of-type(1)  {
     order: 0;
+    -webkit-text-stroke: 0px #6A5ACD;
+    background: linear-gradient(144deg, rgba(252,189,43,1) 0%, rgba(106,90,205,1) 58%);
+    
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-#mywork header .yes {
+#mywork header .yes h1:nth-of-type(1)::before{
+  content: "MY WORK";
+  -webkit-text-stroke: 1px #6A5ACD;
+  -webkit-text-fill-color: #151515;
+}
+#mywork header .yes h1:nth-of-type(1)::after {
+  content: "MY WORK";
+  -webkit-text-stroke: 1px #FFBF26;
+  -webkit-text-fill-color: #151515;
+}
+#detail header .yes h1:nth-of-type(1)::BEFORE {
+  content: attr(data-before);
+  -webkit-text-stroke: 1px #6A5ACD;
+  -webkit-text-fill-color: #151515;
+}
+ #detail header .yes h1:nth-of-type(1)::after {
+  content: attr(data-after);
+  -webkit-text-stroke: 1px #FFBF26;
+  -webkit-text-fill-color: #151515;
+}
+#mywork header .yes, #detail header .yes {
     height: 65vh;
     align-items: center;
+    position: relative;
+    width: 100%;
 }
+#mywork header .yes a, #detail header .yes a{
+  position: absolute;
+  bottom: 0; 
+}
+
 #filterButtons {}
 #mywork #filterButtons > ul  {}
 #filterButtons > ul > li {}
@@ -691,81 +885,6 @@ form label input {
 
 
 
-
-#mywork > section {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-    margin: auto;
-    flex-wrap: wrap;
-    margin: 0 auto 10vw auto;
-    position: relative;
-  }
-  #mywork > section ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-}
-#mywork > section:nth-of-type(2) ul li {
-    flex: 0 0 33%;
-    max-width: 80vw;
-    max-height: 290px;
-    overflow: hidden;
-    position: relative;
-    order: 1;
-    margin: -1em 0em 6em 3em;
-    transition: .4s ease all;
-min-width: 580px;}
-
-
-#mywork > section ul li:hover {
-    
-box-shadow: -40px 40px 0px #6A5ACD;}
-
-#mywork > section ul li:hover i { color: #151515; }
-#mywork > section ul li:hover h2 { color: #6A5ACD; }
-
-#mywork > section ul li:nth-of-type(2):hover, #mywork > section ul li:nth-of-type(4):hover, #mywork > section ul li:nth-of-type(6):hover, #mywork > section ul li:nth-of-type(8):hover  {
-    
-box-shadow: 40px 40px 0px #6A5ACD;}
-#mywork > section figure {
-      
-}
-#mywork > section ul li h2::before {
-display: none;
-}
-#mywork > section figure img {
-    display: block;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-}
-#mywork > section figure a:nth-of-type(2) {
-   
-    padding: 3% 5%;
-}
-#mywork > section figure a:nth-of-type(1) {
-    position: absolute;
-    margin: 2em;
-}
-#mywork > section figure figcaption {
-    display: flex;
-    align-items: end;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-}
-#mywork > section figure figcaption i {
-    font-size: 20px;
-    transform: rotate(-45deg);
-    color: #6A5ACD;
-    transition: all .3s;
-    
-}
 #mywork > section figure h2 {
     transition: all .3s;
     font-weight: 500;
@@ -826,12 +945,17 @@ width: 100%;}
 #applicationImageSection {
 
     flex-wrap: wrap;
-        align-items: center;
-        margin-bottom: 14vh;margin: auto;
-        padding: 2vw;
+        align-items: baseline;
+        margin-bottom: 14vh;
+        padding: 2vw 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;}
+        justify-content: center;
+    padding: 0 12vw;
+    margin: unset;
+    margin-top: clamp(20px,8vw,120px);
+    margin-bottom: clamp(20px,8vw,150px);
+}
     #applicationImageSection figure {
     
     max-width: 850px;overflow: hidden;border-radius: 4px;}
@@ -860,20 +984,22 @@ width: 100%;}
     grid-row-gap: 1.5rem;
     grid-template-columns: 1fr;
   }
-
+  main header .yes > h1 {
+    font-size: 8vw;
+  }
   
-  main > section:nth-of-type(2) li > div h3 {
+  main > section:nth-of-type(2) li > div h3, #mywork > section li div h3 {
     /* font-size: 50px; */
     font-size: 29px;
     letter-spacing: 0;
   }
   
-  main > section:nth-of-type(2) li > div:last-child {
+  main > section:nth-of-type(2) li > div:last-child, #mywork > section li > div:last-child {
     /* padding: 0 clamp(20px,3vw,60px) clamp(40px,3vw,30px) clamp(20px,3vw,60px); */
     padding: 0 clamp(20px,3vw,60px) clamp(5px,3vw,30px) clamp(20px,3vw,60px);
   }
   
-  main > section:nth-of-type(2) li > div i {
+  main > section:nth-of-type(2) li > div i, #mywork > section li div i {
     /* font-size: 55px; */
     font-size: 24px;
   }
@@ -883,7 +1009,7 @@ width: 100%;}
     padding: clamp(5px,3vw,30px) clamp(20px,3vw,30px) 0 clamp(20px,3vw,10px);
   }
   
-  main > section:nth-of-type(2) li > div a {
+  main > section:nth-of-type(2) li > div a, #mywork > section li div a{
     margin: 0 !important;
   }
   
@@ -896,25 +1022,25 @@ width: 100%;}
     font-size: 11px;
   }
   
-  main > section:nth-of-type(2) li {
+  main > section:nth-of-type(2) li, #mywork > section li {
     /* aspect-ratio: 16/7; */
     aspect-ratio: 16/9;
   }
   
-  main > section:nth-of-type(2) li figure::after {
+  main > section:nth-of-type(2) li figure::after, #mywork > section figure::after {
     /* background: linear-gradient(0deg, rgba(0,0,0,0.6) 3%, rgba(0,0,0,0) 100%); */
     background: linear-gradient(0deg, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0) 100%);
   }
   
-  main > section:nth-of-type(2) h2 {
+  main > section:nth-of-type(2) h2, #mywork > section h2 {
     /* font-size: 7em; */
     font-size: 6em;
   }
   
-  main > section:nth-of-type(2) {
+  main > section:nth-of-type(2), #mywork > section {
     /* margin-top: clamp(20px,11vw,160px); */
     /* margin-bottom: clamp(20px,11vw,160px); */
-    margin-top: clamp(20px,35vw,160px);
+    margin-top: clamp(20px,35vw,95px);
     margin-bottom: clamp(20px,35vw,160px);
   }
   
@@ -951,6 +1077,10 @@ width: 100%;}
 
     main header .designContainer > div {
       font-size: 5vw;
+    }
+    #contact-section h2 {
+
+      font-size: 3em;
     }
        
 }
@@ -1012,6 +1142,7 @@ width: 100%;}
     
     footer .footer-container > p {
       order: 3;
+      display: none;
     }
 
     main > section:nth-of-type(1) aside img {
@@ -1020,7 +1151,85 @@ width: 100%;}
     
     footer small {
       order: 2;
+      display: none;
+    }
+   
+       
+}
+@media only screen and (max-width: 420px){ 
+
+  #detail > section:nth-of-type(1) article div p:first-child {
+    flex: 1 0 100%;
+  }
+  #detail > section:nth-of-type(1) article:last-child div p:first-child {
+    margin-bottom: 2em;
+  }
+  p, h3 {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 17vw;
+   }
+  #experience {
+    grid-template-columns: 100%;
+  }
+  #experience > div > h2 {
+    font-size: 19vw;
+  }
+  main > section:nth-of-type(2) h2, #mywork > section h2 {
+    font-size: 22vw;
+  }
+  #experience h3 {
+    font-size: 16px;
+  }
+  main > section:nth-of-type(2) h2, #mywork > section h2 {
+    font-size: 22vw;
+  }
+  main > section:nth-of-type(1) {
+    padding: 5%;
+    }
+    #applicationButton {
+      display: none;
+    }  
+    main > section:nth-of-type(2) li > div h3, #mywork > section li div h3 {
+      font-size: 25px;
+      letter-spacing: 1px;
+    }
+    #aboutMe ~ aside {
+      align-items: baseline;
+    }
+    #aboutMe {
+      padding: 0;
     }
     
-       
+    #aboutMe h2 {
+      font-size: 15vw;
+    }
+    #contact-section h2 {
+      font-size: 13vw;
+    }
+    #contact-section h2 > div:nth-of-type(1) {
+      -webkit-text-stroke: 1px #6A5ACD;
+    }
+    main > section:nth-of-type(1) aside img {
+      max-inline-size: 90vw;
+      }
+    main header .yes > h1 {
+        font-size: 14vw;
+      }
+    main header .designContainer > div {
+        font-size: 9vw;
+      }
+      main header .designContainer h1 { 
+        font-size: 14vw;
+      }
+      #aboutMe ~ aside {
+        padding: 0;
+      }
+      main > section:nth-of-type(1) aside img {
+        filter: none;
+        }
+      
+
+    
 }

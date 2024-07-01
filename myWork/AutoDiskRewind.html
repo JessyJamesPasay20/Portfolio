@@ -11,168 +11,166 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <title>JJP - AutoDisk</title>
-        
+          
         <script>
             function openSlideMenu(){
-                document.getElementsByTagName('header')[0].style.alignItems = 'unset';
-                document.getElementsByTagName('header')[0].style.padding = '0';
-                document.getElementsByTagName('nav')[0].style.width = '22%';
-                document.getElementsByTagName('nav')[0].style.display = 'flex';
-                document.getElementById('nav-logo').style.margin = '68px -300%';
-            }
-        function closeSlideMenu(){
-            document.getElementsByTagName('header')[0].style.alignItems = 'center';
-            document.getElementsByTagName('header')[0].style.padding = '55px 5%';
-            document.getElementsByTagName('nav')[0].style.width = '0';
-            document.getElementsByTagName('nav')[0].style.display = 'none';
-        document.getElementById('nav-logo').style.margin = '0';
-        }
-        window.addEventListener('scroll', reveal);
-            function reveal(){
-              var reveals = document.querySelectorAll('.reveal');
-            
-              for(var i = 0; i < reveals.length; i++) {
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 100;
-            
-                if(revealtop < windowheight - revealpoint){
-                  reveals[i].classList.add('active');
-                }
-                else {
-                }
-              }
-            }
-        </script>
-
-    </head>
-    <body>
-        <header>
-            <span>
-                <a onclick="openSlideMenu()">
-                    <i class="fas fa-bars"></i>
-                </a>
-            </span>
-            <nav>
-                  <i onclick="closeSlideMenu()" class="fas fa-angle-double-left close"></i>
-
-                 <ul>
-
-                     <li>
-                        <a href="../index.html">Home</a>
-                     </li>
-                     <li>
-                         <a href="../mywork.html">My work</a>
-                     </li>
-                    
-                 </ul>
-            </nav>
-            <a href="../index.html">
-            <img id="nav-logo" src="../assets/navbar-logo-1.png">
-            </a>
-        </header>
+         document.getElementsByTagName('header')[0].style.alignItems = 'unset';
+         document.getElementsByTagName('header')[0].style.padding = '0';
+         document.getElementsByTagName('nav')[0].style.width = '100%';
+         document.getElementsByTagName('nav')[0].style.display = 'flex';
+         document.getElementById('nav-logo').style.margin = '68px -300%';
+     }
+   function closeSlideMenu(){
+     document.getElementsByTagName('header')[0].style.alignItems = 'center';
+     document.getElementsByTagName('header')[0].style.padding = '55px 5%';
+     document.getElementsByTagName('nav')[0].style.width = '0';
+     document.getElementsByTagName('nav')[0].style.display = 'none';
+ document.getElementById('nav-logo').style.margin = '0';
+ 
+   }
+   window.addEventListener('scroll', reveal);
+             function reveal(){
+               var reveals = document.querySelectorAll('.reveal');
+             
+               for(var i = 0; i < reveals.length; i++) {
+                 var windowheight = window.innerHeight;
+                 var revealtop = reveals[i].getBoundingClientRect().top;
+                 var revealpoint = 100;
+             
+                 if(revealtop < windowheight - revealpoint){
+                   reveals[i].classList.add('active');
+                 }
+                 else {
+                 }
+               }
+             }
+         </script>
+ 
+     </head>
+     <body>
+         <header>
+             <span>
+                 <a onclick="openSlideMenu()">
+                     <i class="fas fa-bars"></i>
+                 </a>
+             </span>
+             <nav>
+                   <i onclick="closeSlideMenu()" class="fa-solid fa-xmark close"></i>
+                  <ul>
+ 
+                      <li>
+                         <a href="../index.html">Home</a>
+                      </li>
+                      <li>
+                          <a href="../mywork.html">My work</a>
+                      </li>
+                     
+                  </ul>
+             </nav>
+             <a href="#">
+             <img id="nav-logo" src="../assets/navbar-logo-1.png">
+             </a>
+         </header>
         <main id="detail">
             <header>
                 <div class="yes">
-                    <h1> AutoDisk Rewind
+                    <h1 data-before="AutoDisk Rewind" data-after="AutoDisk Rewind"> AutoDisk Rewind
                     </h1>
                 </div>
             </header>  
-            <div id="backButton">
-                <a href="../mywork.html">Back</a> 
-                <a id="websiteButton" href="#">Website</a>
-            </div>
             <section>    
+                <div id="backButton">
+                    <a href="../mywork.html">Back</a> 
+                    <a id="designButton" href="#">Design</a>
+                    <p>2023</p>
+                    <p>AutoDisk</p>
+                </div>
                 <div id="articleWrapper">     
                     <article>
-                    <p>
-                        AutoDisk Rewind is a product to display gathered Car data from AutoDisk & Car leasing companies all across the Netherlands. All in one neat & visual design.
+                        <h2 chapter-number="01">Description</h2>
+                        <div>
+                            <p>
+                                AutoDisk Rewind is a product to display gathered Car data from AutoDisk & Car leasing companies all across the Netherlands. All in one neat & visual design.
+                                The data is updated during varying time intervals, and show you accurate data of the most relevant car data of a select time period. 
+                            </p>
+                            <p>
 
-The data is updated during varying time intervals, and show you accurate data of the most relevant car data of a select time period. 
-                        </p>
-                        
-                        <h2> Year </h2>
-                        <p>
-                            2023
-                        </p>
-                        <h2> Client </h2>
-                        <p>
-                            AutoDisk
-                        </p>
+                            </p>
+                        </div>
+                    </article>
+                    <div>
+                        <img src="../assets/autodisk/autodisk-mockup2.jpg" alt="An image showing mobile images of the website AutoDisk">
+                    </div>
+                    <article>
+                        <h2 chapter-number="02"> Assignment </h2> 
+                        <div>
+                            <p>
+                                During my internship at AutoDisk I was given full responsibility to research and design a Spotify wrapped like application, but in car form. As a second year student it was an extremely difficult task, as I had to apply all the things I've learned over the past years.
+                                The proces was as follows: Over a month period time I had created a lengthy research paper consisting of information about the company, wishes from AutoDisk and their employees, meetings to discuss relevant design points for the end product & the various steps in the iteration proces.
 
-                        <h2> Assignment </h2> 
-                        <p>
-                            During my internship at AutoDisk I was given full responsibility to research and design a Spotify wrapped like application, but in car form. As a second year student it was an extremely difficult task, as I had to apply all the things I've learned over the past years.
-                        </p>
-                        <p>
-                            The proces was as follows: Over a month period time I had created a lengthy research paper consisting of information about the company, wishes from AutoDisk and their employees, meetings to discuss relevant design points for the end product & the various steps in the iteration proces.
-                        </p>
-                        <p>
-                            Once the documentation was finished, I took no more than another month to make a bucketlist of design possibilities to share with my team. And with this bucketlist we narrowed the scope overtime, making my colleagues vote on elements that will make it into the final product. Looking back the project it was an astounding succes, and I managed to finish my internship with a 9/10 score / job offering!
-                        </p>
+                            </p>
+                            <p>
+                            
+                                Once the documentation was finished, I took no more than another month to make a bucketlist of design possibilities to share with my team. And with this bucketlist we narrowed the scope overtime, making my colleagues vote on elements that will make it into the final product. Looking back the project it was an astounding succes, and I managed to finish my internship with a 9/10 score / job offering!
+                            </p>
+                        </div>
                         <a class="button-1 reveal" href="https://docs.google.com/document/d/1254H1WFqM7DXvaYRguIZjy5-rQkqKHkvYavPkuInrAk/edit?usp=sharing">Documentation</a>
-                    </article>   
+
+                    </article>                    
                 </div>      
-                <aside>
-                   
-                </aside>
             </section>  
 
-            <section>
-                <h2>
+            <section id="applicationImageSection">
+                <h2 chapter-number="03">
                     Gallery
                 </h2>   
-                <div id="applicationImageSection" class="reveal">
-                    <figure>
-                        <img src="../assets/autodisk/desktop.jpg">
-                        <figcaption></figcaption>
-                    </figure>
-                </div> 
-                <div id="applicationImageSection" class="reveal">
-                    <figure>
+                <div class="reveal">
+                    <div>
                         <img src="../assets/autodisk/mobile.jpg">
-                        <figcaption></figcaption>
-                    </figure>
+                    </div>
+                    <div>
+                        <img src="../assets/autodisk/desktop.jpg">
+                    </div>
                 </div> 
-            
             </section>
-            <section class="seemore-section">         
-                <h2>See more</h2>
-                <a class="button-1 reveal" href="../mywork.html">
-                    My work
-                </a>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-section footer-section-1">
-                <p>
-                    2023
-                </p>
+            <div id="contact-section" class="reveal">
+                
+                <h2> See <div>more</div> <div>?</div></h2>
             
-                <small>&copy;JJP</small>
-            </div>
-            <div class="footer-section footer-section-2">
-                <a href="../assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
-                    <i class="fa-solid fa-arrow-right"></i>
+         </div>
+     </main>
+     <footer>
+         <div class="footer-container">
+             <p>
+                 2023
+             </p>
+     
+         <div class="footer-social">
+             <a href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
+                 <i class="fa-solid fa-arrow-right"></i>
 
-                    <p>resumé </p>
-                </a>
-                <a href="https://www.linkedin.com/in/jessyjamespasay/">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>linkedin</p>
-                </a>
-                <a href="tel:+31624109099">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Phone</p>
-                </a>
-                <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Email</p>
-                </a>
-            </div>
-        </footer>                                                    
-    </body>
-    <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
-
+                 <p>resumé </p>
+             </a>
+             <a href="https://www.linkedin.com/in/jessyjamespasay/">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>linkedin</p>
+             </a>
+             <a href="tel:+31624109099">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Phone</p>
+             </a>
+             <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Email</p>
+             </a>
+         </div>
+         <small>&copy;JJP</small>
+     </div>
+     </footer>                             
+ </body>
+ <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
 </html>
+         
+         
+         
             
