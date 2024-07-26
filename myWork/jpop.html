@@ -13,39 +13,40 @@
         <title>JJP - Jpop</title>
         
         <script>
-           function openSlideMenu(){
-        document.getElementsByTagName('header')[0].style.alignItems = 'unset';
-        document.getElementsByTagName('header')[0].style.padding = '0';
-        document.getElementsByTagName('nav')[0].style.width = '22%';
-        document.getElementsByTagName('nav')[0].style.display = 'flex';
-        document.getElementById('nav-logo').style.margin = '68px -300%';
-    }
-  function closeSlideMenu(){
-    document.getElementsByTagName('header')[0].style.alignItems = 'center';
-    document.getElementsByTagName('header')[0].style.padding = '55px 5%';
-    document.getElementsByTagName('nav')[0].style.width = '0';
-    document.getElementsByTagName('nav')[0].style.display = 'none';
-document.getElementById('nav-logo').style.margin = '0';
-  }
-  window.addEventListener('scroll', reveal);
-            function reveal(){
-              var reveals = document.querySelectorAll('.reveal');
-            
-              for(var i = 0; i < reveals.length; i++) {
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 100;
-            
-                if(revealtop < windowheight - revealpoint){
-                  reveals[i].classList.add('active');
-                }
-                else {
-                }
-              }
-            }
-        </script>
-
-    </head>
+            function openSlideMenu(){
+         document.getElementsByTagName('header')[0].style.alignItems = 'unset';
+         document.getElementsByTagName('header')[0].style.padding = '0';
+         document.getElementsByTagName('nav')[0].style.width = '100%';
+         document.getElementsByTagName('nav')[0].style.display = 'flex';
+         document.getElementById('nav-logo').style.margin = '68px -300%';
+     }
+   function closeSlideMenu(){
+     document.getElementsByTagName('header')[0].style.alignItems = 'center';
+     document.getElementsByTagName('header')[0].style.padding = '55px 5%';
+     document.getElementsByTagName('nav')[0].style.width = '0';
+     document.getElementsByTagName('nav')[0].style.display = 'none';
+ document.getElementById('nav-logo').style.margin = '0';
+ 
+   }
+   window.addEventListener('scroll', reveal);
+             function reveal(){
+               var reveals = document.querySelectorAll('.reveal');
+             
+               for(var i = 0; i < reveals.length; i++) {
+                 var windowheight = window.innerHeight;
+                 var revealtop = reveals[i].getBoundingClientRect().top;
+                 var revealpoint = 100;
+             
+                 if(revealtop < windowheight - revealpoint){
+                   reveals[i].classList.add('active');
+                 }
+                 else {
+                 }
+               }
+             }
+         </script>
+ 
+     </head>
     <body>
         <header>
             <span>
@@ -54,8 +55,7 @@ document.getElementById('nav-logo').style.margin = '0';
                 </a>
             </span>
             <nav>
-                  <i onclick="closeSlideMenu()" class="fas fa-angle-double-left close"></i>
-
+                <i onclick="closeSlideMenu()" class="fa-solid fa-xmark close"></i>
                  <ul>
 
                      <li>
@@ -74,104 +74,104 @@ document.getElementById('nav-logo').style.margin = '0';
         <main id="detail">
             <header>
                 <div class="yes">
-                    <h1> Jpop
+                    <h1 data-before="Jpop" data-after="Jpop"> Jpop
                     </h1>
                 </div>
-            </header> 
-            <div id="backButton">
-                <a href="../mywork.html">Back</a> 
-                <a id="websiteButton" href="#">Website</a>
-            </div>
-            <section>       
-                <div id="articleWrapper">  
+            </header>  
+            <section>    
+                <div id="backButton">
+                    <a href="../mywork.html">Back</a> 
+                    <a id="websiteButton" href="#">Website</a>
+                    <p>2021</p>
+                    <p>HVA</p>
+                </div>
+                
+                <div id="articleWrapper">     
                     <article>
-                        <p>
-                            Jpop is a fan website for the music genre JPOP, it has a list of useful information about the genre. Such as topics about popular artists, authors favorite tracks and history of JPOP. More can be found by visiting the website!
+                        <h2 chapter-number="01">Description</h2>
+                        <div>
+                            <p>
+                                Jpop is a fan website for the music genre JPOP, it has a list of useful information about the genre. Such as topics about popular artists, authors favorite tracks and history of JPOP. More can be found by visiting the website!
 
-                        </p>
-                        
-                        <h2> Year </h2>
-                        <p>
-                            2021
-                        </p>
-                        <h2> Client </h2>
-                        <p>
-                            Hogeschool van Amsterdam ( HVA )
-                        </p>
+                            </p>
+                            <p>
 
-                        <h2> Assignment </h2> 
-                        <p>
-                            One of my college assignments for "Internet standards" for my first semester, our assignment was to build and design a website while only using html/css. 
+                            </p>
+                        </div>
+                    </article>   
+                    <div>
+                        <img src="../assets/jpop/jpop-mockup2.jpg" alt="An image showing mobile images of the website AutoDisk">
+                    </div>
+                    <article>
+                        <h2 chapter-number="02"> Assignment </h2> 
+                        <div>
+                            <p>
+                                One of my college assignments for "Internet standards" for my first semester, our assignment was to build and design a website while only using html/css. 
                         
                             This got me a perfect score on my exams.
-                        </p>
+
+                            </p>
+                        </div>
                         <a class="button-1 reveal" href="https://jessyjamespasay20.github.io/Jpop/">Visit now</a>
-                    </article>        
-                </div> 
-                <aside>
-                    <figure>
-                        <img src="../assets/jpop/fullPage.jpg">
-                        <figcaption></figcaption>
-                    </figure>
-                    
-                </aside>
+                    </article>                    
+                </div>      
             </section>  
-            <section>
-                <h2>
+            <section id="applicationImageSection" class="mobile">
+                <h2 chapter-number="03">
                     Gallery
-                </h2>    
-                <div id="websiteImageSection" class="reveal">
-                    <figure>
+                </h2>   
+                <div class="reveal">
+                    <div>
                         <img src="../assets/jpop/mobile-1.jpg">
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
+                    </div>
+                    <div>
                         <img src="../assets/jpop/mobile-2.jpg">
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
+                    </div>
+                    <div>
                         <img src="../assets/jpop/mobile-3.jpg">
-                        <figcaption></figcaption>
-                    </figure>
+                    </div>
                 </div> 
-            </section>
-            <section class="seemore-section">         
-                <h2>See more</h2>
-                <a class="button-1 reveal" href="../mywork.html">
-                    My work
-                </a>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-section footer-section-1">
-                <p>
-                    2023
-                </p>
+            </section>         
+            <div id="contact-section" class="reveal">
+                
+                <h2> See <div>more</div> <div>?</div></h2>
             
-                <small>&copy;JJP</small>
-            </div>
-            <div class="footer-section footer-section-2">
-                <a href="../assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
-                    <i class="fa-solid fa-arrow-right"></i>
+         </div>
+     </main>
+     <footer>
+         <div class="footer-container">
+             <p>
+                 2023
+             </p>
+     
+         <div class="footer-social">
+             <a href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
+                 <i class="fa-solid fa-arrow-right"></i>
 
-                    <p>resumé </p>
-                </a>
-                <a href="https://www.linkedin.com/in/jessyjamespasay/">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>linkedin</p>
-                </a>
-                <a href="tel:+31624109099">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Phone</p>
-                </a>
-                <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Email</p>
-                </a>
-            </div>
-        </footer>                                                              
-    </body>
-    <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
-
+                 <p>resumé </p>
+             </a>
+             <a href="https://www.linkedin.com/in/jessyjamespasay/">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>linkedin</p>
+             </a>
+             <a href="tel:+31624109099">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Phone</p>
+             </a>
+             <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Email</p>
+             </a>
+         </div>
+         <small>&copy;JJP</small>
+     </div>
+     </footer>                             
+ </body>
+ <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
 </html>
+         
+         
+         
+            
+
             

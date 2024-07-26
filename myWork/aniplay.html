@@ -14,38 +14,39 @@
         
         <script>
             function openSlideMenu(){
-                document.getElementsByTagName('header')[0].style.alignItems = 'unset';
-                document.getElementsByTagName('header')[0].style.padding = '0';
-                document.getElementsByTagName('nav')[0].style.width = '22%';
-                document.getElementsByTagName('nav')[0].style.display = 'flex';
-                document.getElementById('nav-logo').style.margin = '68px -300%';
-            }
-        function closeSlideMenu(){
-            document.getElementsByTagName('header')[0].style.alignItems = 'center';
-            document.getElementsByTagName('header')[0].style.padding = '55px 5%';
-            document.getElementsByTagName('nav')[0].style.width = '0';
-            document.getElementsByTagName('nav')[0].style.display = 'none';
-        document.getElementById('nav-logo').style.margin = '0';
-        }
-        window.addEventListener('scroll', reveal);
-            function reveal(){
-              var reveals = document.querySelectorAll('.reveal');
-            
-              for(var i = 0; i < reveals.length; i++) {
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 100;
-            
-                if(revealtop < windowheight - revealpoint){
-                  reveals[i].classList.add('active');
-                }
-                else {
-                }
-              }
-            }
-        </script>
-
-    </head>
+         document.getElementsByTagName('header')[0].style.alignItems = 'unset';
+         document.getElementsByTagName('header')[0].style.padding = '0';
+         document.getElementsByTagName('nav')[0].style.width = '100%';
+         document.getElementsByTagName('nav')[0].style.display = 'flex';
+         document.getElementById('nav-logo').style.margin = '68px -300%';
+     }
+   function closeSlideMenu(){
+     document.getElementsByTagName('header')[0].style.alignItems = 'center';
+     document.getElementsByTagName('header')[0].style.padding = '55px 5%';
+     document.getElementsByTagName('nav')[0].style.width = '0';
+     document.getElementsByTagName('nav')[0].style.display = 'none';
+ document.getElementById('nav-logo').style.margin = '0';
+ 
+   }
+   window.addEventListener('scroll', reveal);
+             function reveal(){
+               var reveals = document.querySelectorAll('.reveal');
+             
+               for(var i = 0; i < reveals.length; i++) {
+                 var windowheight = window.innerHeight;
+                 var revealtop = reveals[i].getBoundingClientRect().top;
+                 var revealpoint = 100;
+             
+                 if(revealtop < windowheight - revealpoint){
+                   reveals[i].classList.add('active');
+                 }
+                 else {
+                 }
+               }
+             }
+         </script>
+ 
+     </head>
     <body>
         <header>
             <span>
@@ -54,8 +55,7 @@
                 </a>
             </span>
             <nav>
-                  <i onclick="closeSlideMenu()" class="fas fa-angle-double-left close"></i>
-
+                <i onclick="closeSlideMenu()" class="fa-solid fa-xmark close"></i>
                  <ul>
 
                      <li>
@@ -64,7 +64,7 @@
                      <li>
                          <a href="../mywork.html">My work</a>
                      </li>
-                    
+                     
                  </ul>
             </nav>
             <a href="../index.html">
@@ -83,106 +83,96 @@
                     <div id="backButton">
                         <a href="../mywork.html">Back</a> 
                         <a id="designButton" href="#">Design</a>
-                        <p>2023</p>
-                        <p>AutoDisk</p>
+                        <p>2022</p>
+                        <p>HVA</p>
                     </div>
-            <section>    
+          
                 <div id="articleWrapper">     
-                    <article>
-                    <p>
-                        Aniplay is a concept targetting an audience that enjoys watching Anime together with friends. The problem I'm solving with this issue,                           is that people need to use multiple different apps or products to watch shows online with friends. My way to solve this, is by combining it all in a single app. So friends or strangers can watch their favorite shows while being able to speak and chat with eachother on the same screen. 
+                    <article class="reveal">
+                        <h2 chapter-number="01">Description</h2>
+                        <div>
+                            <p>
+                                Aniplay is a concept targetting an audience that enjoys watching Anime together with friends. The problem I'm solving with this issue,                           is that people need to use multiple different apps or products to watch shows online with friends. My way to solve this, is by combining it all in a single app. So friends or strangers can watch their favorite shows while being able to speak and chat with eachother on the same screen. 
+
+                            </p>
+                            <p>
+                                This is currently a design only, I personally think it's a great idea that has not been implemented well on current apps & websites. So this is my take on solving this issue.
+
+                            </p>
+                        </div>
                         
-                        </p>
-                        <p>
-                            This is currently a design only, I personally think it's a great idea that has not been implemented well on current apps & websites. So this is my take on solving this issue.
-                        </p>
-                        <h2> Year </h2>
-                        <p>
-                            2022
-                        </p>
-                        <h2> Client </h2>
-                        <p>
-                            Hogeschool van Amsterdam
-                        </p>
-
-                        <h2> Assignment </h2> 
-                        <p>
-                            This was my first project ( Multi device design ) during my second year attending the HVA. I was tasked to think of a concept that is                                   consistent and usable on multiple devices seemlessly.
-                        </p>
+                    </article>    
+                    <div class="reveal">
+                        <img src="../assets/aniplay/pc.png" alt="An image showing mobile images of the website AutoDisk">
+                    </div>
+                    <article class="reveal">
+                        <h2 chapter-number="02"> Assignment </h2> 
+                        <div>
+                            <p>
+                                This was my first project ( Multi device design ) during my second year attending the HVA. I was tasked to think of a concept that is                                   consistent and usable on multiple devices seemlessly.
+   
+                            </p>
+                        </div>
                         <a class="button-1 reveal" href="../assets/aniplay/aniplay-documentation.pdf">Visit</a>
-                    </article>   
+                    </article>                    
                 </div>      
-                <aside>
-                    <figure>
-                        <img src="../assets/aniplay/design6.png">
-                        <figcaption></figcaption>
-                    </figure>
-                </aside>
             </section>  
-
-            <section>
-                <h2>
+            <section id="applicationImageSection" class="mobile">
+                <h2 chapter-number="03">
                     Gallery
                 </h2>   
-                <div id="websiteImageSection" class="reveal">
-                    <figure>
-                        <img src="../assets/aniplay/design2.png">
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/aniplay/design5.png">
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
+                <div class="reveal">
+                    <div>
                         <img src="../assets/aniplay/design1.png">
-                        <figcaption></figcaption>
-                    </figure>
+                    </div>
+                    <div>
+                        <img src="../assets/aniplay/design2.png">                    
+                    </div>
+                    <div>
+                        <img src="../assets/aniplay/design6.png">                    
+                    </div>
                 </div> 
-                <div id="applicationImageSection" class="reveal">
-                    <figure>
-                        <img src="../assets/aniplay/pc.png"">
-                        <figcaption></figcaption>
-                    </figure>
-                </div> 
+            </section>         
+            <div id="contact-section" class="reveal">
+                
+                <h2> See <div>more</div> <div>?</div></h2>
             
-            </section>
-            <section class="seemore-section">         
-                <h2>See more</h2>
-                <a class="button-1 reveal" href="../mywork.html">
-                    My work
-                </a>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-section footer-section-1">
-                <p>
-                    2023
-                </p>
-            
-                <small>&copy;JJP</small>
-            </div>
-            <div class="footer-section footer-section-2">
-                <a href="../assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
-                    <i class="fa-solid fa-arrow-right"></i>
+         </div>
+     </main>
+     <footer>
+         <div class="footer-container">
+             <p>
+                 2023
+             </p>
+     
+         <div class="footer-social">
+             <a href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
+                 <i class="fa-solid fa-arrow-right"></i>
 
-                    <p>resumé </p>
-                </a>
-                <a href="https://www.linkedin.com/in/jessyjamespasay/">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>linkedin</p>
-                </a>
-                <a href="tel:+31624109099">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Phone</p>
-                </a>
-                <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Email</p>
-                </a>
-            </div>
-        </footer>                                                    
-    </body>
-    <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
-
+                 <p>resumé </p>
+             </a>
+             <a href="https://www.linkedin.com/in/jessyjamespasay/">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>linkedin</p>
+             </a>
+             <a href="tel:+31624109099">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Phone</p>
+             </a>
+             <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Email</p>
+             </a>
+         </div>
+         <small>&copy;JJP</small>
+     </div>
+     </footer>                             
+ </body>
+ <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
 </html>
+         
+         
+         
+            
+
             

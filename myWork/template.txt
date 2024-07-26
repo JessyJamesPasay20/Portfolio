@@ -76,49 +76,43 @@
             <main id="detail">
                 <header>
                     <div class="yes">
-                        <h1 data-before="Captioned festival" data-after="Captioned festival"> Captioned festival
+                        <h1 data-before="" data-after=""> 
                         </h1>
                     </div>
                 </header>  
                 <section>    
                     <div id="backButton">
                         <a href="../mywork.html">Back</a> 
-                        <a id="designButton" href="#">Design</a>
-                        <p>2022</p>
-                        <p>HVA</p>
+                        <a id="designButton" href="#"></a>
+                        <p></p>
+                        <p></p>
                     </div>             
                     <div id="articleWrapper">     
                         <article class="reveal">
                             <h2 chapter-number="01">Description</h2>
                             <div>
                                 <p>
-                                    Captioned festival is a solution for deaf people, and an oportunity for any other festival visitor. It isn't rare for deaf people to visit festivals, they can feel the vibration
-                                    of music and dance to it!  The only issue most of them will have, is communicating with people that are not deaf. 
-                                   
+                                 
                                 </p>
                                 <p>
-                                    The glasses displayed in the image has multiple features, ( The captioned glasses) can translate
-                                speech (mouth movement (lipreading)) into live written text. Due to the loud music, you'll have a hard time hearing eachother. That's why the captioned glasses are a great oppurtinity for people to connect on festival grounds!
+                                  
                             </p>
                             </div>
                         </article>   
                         <div class="reveal">
-                            <img src="../assets/captionedfestival/myWork.jpg" alt="An image showing mobile images of the website AutoDisk">
+                            <img src="../assets/" alt="An image showing mobile images of the website AutoDisk">
                         </div>
                         <article class="reveal">
                             <h2 chapter-number="02"> Assignment </h2> 
                             <div>
                                 <p>
-                                    This was my third project on the HVA, it was about making a unique idea for meeting eachother in the offline world. While making it inclusive for deaf people! It was a 3 week 
-                                    process of 3 sprints where you do something different every day. 
+                                  
                                 </p>
                                 <p>
-                                    You start with understanding and reviewing your assignment, second generate ideas by using different brainstorm ideas, third 
-                                    you make a storyboard which demonstrates your product and make a paper prototype, fourth you evaluate and test your product in preparation for the friday expo, fifth you gather with other designers and 
-                                    give feedback on eachothers work. You repeat these steps every week, and keep improving your work.
+                                   
                                 </p>
                             </div>
-                            <a class="button-1 reveal"  href="../assets/captionedfestival/fullProjectInfo.pdf" download="fullProjectInfo.pdf" rel="noopener noreferrer" target="_blank" >Full project info</a>
+                            <a class="button-1 reveal"  href="../assets#" rel="noopener noreferrer" target="_blank" >Full project info</a>
                         </article>                    
                     </div>      
                 </section>  

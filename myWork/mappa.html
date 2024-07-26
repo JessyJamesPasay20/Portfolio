@@ -14,38 +14,39 @@
         
         <script>
             function openSlideMenu(){
-                document.getElementsByTagName('header')[0].style.alignItems = 'unset';
-                document.getElementsByTagName('header')[0].style.padding = '0';
-                document.getElementsByTagName('nav')[0].style.width = '22%';
-                document.getElementsByTagName('nav')[0].style.display = 'flex';
-                document.getElementById('nav-logo').style.margin = '68px -300%';
-            }
-        function closeSlideMenu(){
-            document.getElementsByTagName('header')[0].style.alignItems = 'center';
-            document.getElementsByTagName('header')[0].style.padding = '55px 5%';
-            document.getElementsByTagName('nav')[0].style.width = '0';
-            document.getElementsByTagName('nav')[0].style.display = 'none';
-        document.getElementById('nav-logo').style.margin = '0';
-        }
-        window.addEventListener('scroll', reveal);
-            function reveal(){
-              var reveals = document.querySelectorAll('.reveal');
-            
-              for(var i = 0; i < reveals.length; i++) {
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 100;
-            
-                if(revealtop < windowheight - revealpoint){
-                  reveals[i].classList.add('active');
-                }
-                else {
-                }
-              }
-            }
-        </script>
-
-    </head>
+         document.getElementsByTagName('header')[0].style.alignItems = 'unset';
+         document.getElementsByTagName('header')[0].style.padding = '0';
+         document.getElementsByTagName('nav')[0].style.width = '100%';
+         document.getElementsByTagName('nav')[0].style.display = 'flex';
+         document.getElementById('nav-logo').style.margin = '68px -300%';
+     }
+   function closeSlideMenu(){
+     document.getElementsByTagName('header')[0].style.alignItems = 'center';
+     document.getElementsByTagName('header')[0].style.padding = '55px 5%';
+     document.getElementsByTagName('nav')[0].style.width = '0';
+     document.getElementsByTagName('nav')[0].style.display = 'none';
+ document.getElementById('nav-logo').style.margin = '0';
+ 
+   }
+   window.addEventListener('scroll', reveal);
+             function reveal(){
+               var reveals = document.querySelectorAll('.reveal');
+             
+               for(var i = 0; i < reveals.length; i++) {
+                 var windowheight = window.innerHeight;
+                 var revealtop = reveals[i].getBoundingClientRect().top;
+                 var revealpoint = 100;
+             
+                 if(revealtop < windowheight - revealpoint){
+                   reveals[i].classList.add('active');
+                 }
+                 else {
+                 }
+               }
+             }
+         </script>
+ 
+     </head>
     <body>
         <header>
             <span>
@@ -54,8 +55,7 @@
                 </a>
             </span>
             <nav>
-                  <i onclick="closeSlideMenu()" class="fas fa-angle-double-left close"></i>
-
+                <i onclick="closeSlideMenu()" class="fa-solid fa-xmark close"></i>
                  <ul>
 
                      <li>
@@ -64,119 +64,116 @@
                      <li>
                          <a href="../mywork.html">My work</a>
                      </li>
-                  
+                     
                  </ul>
             </nav>
             <a href="../index.html">
             <img id="nav-logo" src="../assets/navbar-logo-1.png">
             </a>
-        </header>
-        <main id="detail">
-            <header>
-                <div class="yes">
-                    <h1> Mappa
-                    </h1>
-                </div>
-            </header>  
-            <div id="backButton">
-                <a href="../mywork.html">Back</a> 
-                <a id="websiteButton" href="#">Website</a>
-            </div>
-            <section>    
+            </header>
+            <main id="detail">
+                <header>
+                    <div class="yes">
+                        <h1 data-before="Mappa" data-after="Mappa"> Mappa
+                        </h1>
+                    </div>
+                </header>  
+                <section>    
+                    <div id="backButton">
+                        <a href="../mywork.html">Back</a> 
+                        <a id="websiteButton" href="#">Website</a>
+                        <p>2022</p>
+                        <p>HVA</p>
+                    </div>
+           
+                  
                 <div id="articleWrapper">     
                     <article>
-                    <p>
-                        This is a redesign of an existing website from Mappa.co.jp. After doing research in regards to inclusivity, I had concluded that several changes had to be done to the website to assist users with different disabilities to have a better user experience.
-                        Further was the Html code of the website, not following the Semantic guidelines from W3C. So I corrected that aswell.
-                        </p>
-                        <p>
-                            The website is available on all devices ( responsive ), though not all buttons and interactions lead to pages as I've only designed two pages. Further the website changes based on if the user is using Light or Dark mode.
-                        </p>
-                        <h2> Year </h2>
-                        <p>
-                            2022
-                        </p>
-                        <h2> Client </h2>
-                        <p>
-                            Hogeschool van Amsterdam
-                        </p>
+                        <h2 chapter-number="01">Description</h2>
+                        <div>
+                            <p>
 
-                        <h2> Assignment </h2> 
-                        <p>
-                            This was my final assignment for FED ( Front end design ). The assignment was to find a website you like, and research whether it's inclusive for people with disabilities. Further you had to correct the HTML / CSS while following the W3C guidelines.
-                        </p>
-                        <a class="button-1 reveal" href="https://github.com/JessyJamesPasay20/FED">Github</a>
+                                This is a redesign of an existing website from Mappa.co.jp. After doing research in regards to inclusivity, I had concluded that several changes had to be done to the website to assist users with different disabilities to have a better user experience.
+                                Further was the Html code of the website, not following the Semantic guidelines from W3C. So I corrected that aswell.
+                            </p>
+                            <p>
+                                The website is available on all devices ( responsive ), though not all buttons and interactions lead to pages as I've only designed two pages. Further the website changes based on if the user is using Light or Dark mode.
+
+                            </p>
+                        </div>
                     </article>   
+                    <div>
+                        <img src="../assets/mappa/mappa-mockup.jpg" alt="An image showing mobile images of the website AutoDisk">
+                    </div>
+                    <article>
+                        <h2 chapter-number="02"> Assignment </h2> 
+                        <div>
+                            <p>
+                                This was my final assignment for FED ( Front end design ). The assignment was to find a website you like, and research whether it's inclusive for people with disabilities. Further you had to correct the HTML / CSS while following the W3C guidelines.
+
+
+                            </p>
+                        </div>
+                        <a class="button-1 reveal" href="https://github.com/JessyJamesPasay20/FED">Github</a>
+                    </article>                    
                 </div>      
-                <aside>
-                    <figure>
-                        <img src="../assets/mappa/mappa-img-4.jpg">
-                        <figcaption></figcaption>
-                    </figure>
-                </aside>
-            </section>      
-            <section>
-                <h2>
+            </section>  
+            <section id="applicationImageSection" class="mobile">
+                <h2 chapter-number="03">
                     Gallery
-                </h2>
-                <div id="websiteImageSection" class="reveal">
-                    <figure>
+                </h2>   
+                <div class="reveal">
+                    <div>
                         <img src="../assets/mappa/mappa-img-1.jpg">
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/mappa/mappa-img-2.jpg">
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/mappa/mappa-img-3.jpg">
-                        <figcaption></figcaption>
-                    </figure>
+                    </div>
+                    <div>
+                        <img src="../assets/mappa/mappa-img-2.jpg">                    
+                    </div>
+                    <div>
+                        <img src="../assets/mappa/mappa-img-4.jpg">
+                    </div>
                 </div> 
-                <div id="applicationImageSection" class="reveal">
-                    <figure>
-                        <img src="../assets/mappa/mappa-img-pc.jpg"">
-                        <figcaption></figcaption>
-                    </figure>
-                </div> 
-            </section>
-            <section class="seemore-section">         
-                <h2>See more</h2>
-                <a class="button-1 reveal" href="../mywork.html">
-                    My work
-                </a>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-section footer-section-1">
-                <p>
-                    2023
-                </p>
+            </section>         
+            <div id="contact-section" class="reveal">
+                
+                <h2> See <div>more</div> <div>?</div></h2>
             
-                <small>&copy;JJP</small>
-            </div>
-            <div class="footer-section footer-section-2">
-                <a href="../assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
-                    <i class="fa-solid fa-arrow-right"></i>
+         </div>
+     </main>
+     <footer>
+         <div class="footer-container">
+             <p>
+                 2023
+             </p>
+     
+         <div class="footer-social">
+             <a href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
+                 <i class="fa-solid fa-arrow-right"></i>
 
-                    <p>resumé </p>
-                </a>
-                <a href="https://www.linkedin.com/in/jessyjamespasay/">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>linkedin</p>
-                </a>
-                <a href="tel:+31624109099">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Phone</p>
-                </a>
-                <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Email</p>
-                </a>
-            </div>
-        </footer>                                                      
-    </body>
-    <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
-
+                 <p>resumé </p>
+             </a>
+             <a href="https://www.linkedin.com/in/jessyjamespasay/">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>linkedin</p>
+             </a>
+             <a href="tel:+31624109099">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Phone</p>
+             </a>
+             <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Email</p>
+             </a>
+         </div>
+         <small>&copy;JJP</small>
+     </div>
+     </footer>                             
+ </body>
+ <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
 </html>
+         
+         
+         
+            
+
             

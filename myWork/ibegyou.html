@@ -11,41 +11,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <title>JJP - I beg you</title>
-        
         <script>
             function openSlideMenu(){
-                document.getElementsByTagName('header')[0].style.alignItems = 'unset';
-                document.getElementsByTagName('header')[0].style.padding = '0';
-                document.getElementsByTagName('nav')[0].style.width = '22%';
-                document.getElementsByTagName('nav')[0].style.display = 'flex';
-                document.getElementById('nav-logo').style.margin = '68px -300%';
-            }
-        function closeSlideMenu(){
-            document.getElementsByTagName('header')[0].style.alignItems = 'center';
-            document.getElementsByTagName('header')[0].style.padding = '55px 5%';
-            document.getElementsByTagName('nav')[0].style.width = '0';
-            document.getElementsByTagName('nav')[0].style.display = 'none';
-        document.getElementById('nav-logo').style.margin = '0';
-        }
-        window.addEventListener('scroll', reveal);
-            function reveal(){
-              var reveals = document.querySelectorAll('.reveal');
-            
-              for(var i = 0; i < reveals.length; i++) {
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 100;
-            
-                if(revealtop < windowheight - revealpoint){
-                  reveals[i].classList.add('active');
-                }
-                else {
-                }
-              }
-            }
-        </script>
-
-    </head>
+         document.getElementsByTagName('header')[0].style.alignItems = 'unset';
+         document.getElementsByTagName('header')[0].style.padding = '0';
+         document.getElementsByTagName('nav')[0].style.width = '100%';
+         document.getElementsByTagName('nav')[0].style.display = 'flex';
+         document.getElementById('nav-logo').style.margin = '68px -300%';
+     }
+   function closeSlideMenu(){
+     document.getElementsByTagName('header')[0].style.alignItems = 'center';
+     document.getElementsByTagName('header')[0].style.padding = '55px 5%';
+     document.getElementsByTagName('nav')[0].style.width = '0';
+     document.getElementsByTagName('nav')[0].style.display = 'none';
+ document.getElementById('nav-logo').style.margin = '0';
+ 
+   }
+   window.addEventListener('scroll', reveal);
+             function reveal(){
+               var reveals = document.querySelectorAll('.reveal');
+             
+               for(var i = 0; i < reveals.length; i++) {
+                 var windowheight = window.innerHeight;
+                 var revealtop = reveals[i].getBoundingClientRect().top;
+                 var revealpoint = 100;
+             
+                 if(revealtop < windowheight - revealpoint){
+                   reveals[i].classList.add('active');
+                 }
+                 else {
+                 }
+               }
+             }
+         </script>
+ 
+     </head>
     <body>
         <header>
             <span>
@@ -54,8 +54,7 @@
                 </a>
             </span>
             <nav>
-                  <i onclick="closeSlideMenu()" class="fas fa-angle-double-left close"></i>
-
+                <i onclick="closeSlideMenu()" class="fa-solid fa-xmark close"></i>
                  <ul>
 
                      <li>
@@ -64,7 +63,7 @@
                      <li>
                          <a href="../mywork.html">My work</a>
                      </li>
-                    
+                     
                  </ul>
             </nav>
             <a href="../index.html">
@@ -74,103 +73,104 @@
         <main id="detail">
             <header>
                 <div class="yes">
-                    <h1> I beg you - Lyrics 
+                    <h1 data-before="I beg you" data-after="I beg you"> I beg you
                     </h1>
                 </div>
             </header>  
-            <div id="backButton">
-                <a href="../mywork.html">Back</a> 
-                <a id="websiteButton" href="#">Website</a>
-            </div>
             <section>    
+                <div id="backButton">
+                    <a href="../mywork.html">Back</a> 
+                    <a id="designButton" href="#">Design</a>
+                    <p>2022</p>
+                    <p>HVA</p>
+                </div>
+                
                 <div id="articleWrapper">     
                     <article>
-                    <p>
-                            A design for the full lyrics of one my favorite songs ever : I beg you, from Aimer. The focus was to make a design that matches the songtext, so the reader can visually understand what the lyrics really mean.
-         
-                        </p>
-                        <p>
-                            I made the design for mobile sizes only. You can find full documentation of my process & storyboards of animations by clicking on the button below.
-                        </p>
-                        <h2> Year </h2>
-                        <p>
-                            2022
-                        </p>
-                        <h2> Client </h2>
-                        <p>
-                            Hogeschool van Amsterdam
-                        </p>
+                        <h2 chapter-number="01">Description</h2>
+                        <div>
+                            <p>
+                                A design for the full lyrics of one my favorite songs ever : I beg you, from Aimer. The focus was to make a design that matches the songtext, so the reader can visually understand what the lyrics really mean.
 
-                        <h2> Assignment </h2> 
-                        <p>
-                             This was my final assignment for Design class in Year 2. The assignment was to pick a song you really like, and think of a design the compliments the lyrics. You're asked to do extensive research in regards to what you're trying to make. Further more you have to make an animation the further supports the design.
-                        </p>
+                            </p>
+                            <p>
+                                I made the design for mobile sizes only. You can find full documentation of my process & storyboards of animations by clicking on the button below.
+
+                            </p>
+                        </div>
+                    </article>    
+                    <div>
+                        <img src="../assets/ibegyou/ibegyou-mockup.jpg" alt="An image showing mobile images of the website AutoDisk">
+                    </div>
+                    <article>
+                        <h2 chapter-number="02"> Assignment </h2> 
+                        <div>
+                            <p>
+                                This was my final assignment for Design class in Year 2. The assignment was to pick a song you really like, and think of a design the compliments the lyrics. You're asked to do extensive research in regards to what you're trying to make. Further more you have to make an animation the further supports the design.
+
+
+                            </p>
+                        </div>
                         <a class="button-1 reveal" href="https://www.dropbox.com/home?preview=ibegyou-lyrics.pdf">Documentation</a>
-                    </article>   
+                    </article>                    
                 </div>      
-                <aside>
-                    <figure>
-                        <img src="../assets/ibegyou/image2.PNG">
-                        <figcaption></figcaption>
-                    </figure>
-                </aside>
-            </section>    
-            <section>
-                <h2>
+            </section>  
+            <section id="applicationImageSection" class="mobile">
+                <h2 chapter-number="03">
                     Gallery
-                </h2>  
-                <div id="websiteImageSection" class="reveal">
-                    <figure>
+                </h2>   
+                <div class="reveal">
+                    <div>
                         <img src="../assets/ibegyou/image1.PNG">
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
+                    </div>
+                    <div>
+                        <img src="../assets/ibegyou/image2.PNG">
+                    </div>
+                    <div>
                         <img src="../assets/ibegyou/image3.PNG">
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/ibegyou/image4.PNG">
-                        <figcaption></figcaption>
-                    </figure>
+                    </div>
                 </div> 
-            </section>
-            <section class="seemore-section">         
-                <h2>See more</h2>
-                <a class="button-1 reveal" href="../mywork.html">
-                    My work
-                </a>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-section footer-section-1">
-                <p>
-                    2023
-                </p>
+            </section>         
+            <div id="contact-section" class="reveal">
+                
+                <h2> See <div>more</div> <div>?</div></h2>
             
-                <small>&copy;JJP</small>
-            </div>
-            <div class="footer-section footer-section-2">
-                <a href="../assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
-                    <i class="fa-solid fa-arrow-right"></i>
+         </div>
+     </main>
+     <footer>
+         <div class="footer-container">
+             <p>
+                 2023
+             </p>
+     
+         <div class="footer-social">
+             <a href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
+                 <i class="fa-solid fa-arrow-right"></i>
 
-                    <p>resumé </p>
-                </a>
-                <a href="https://www.linkedin.com/in/jessyjamespasay/">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>linkedin</p>
-                </a>
-                <a href="tel:+31624109099">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Phone</p>
-                </a>
-                <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Email</p>
-                </a>
-            </div>
-        </footer>                                                                  
-    </body>
-    <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
-
+                 <p>resumé </p>
+             </a>
+             <a href="https://www.linkedin.com/in/jessyjamespasay/">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>linkedin</p>
+             </a>
+             <a href="tel:+31624109099">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Phone</p>
+             </a>
+             <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Email</p>
+             </a>
+         </div>
+         <small>&copy;JJP</small>
+     </div>
+     </footer>                             
+ </body>
+ <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
 </html>
+         
+         
+         
+            
+
             

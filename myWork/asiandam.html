@@ -12,40 +12,42 @@
 
         <title>JJP - AsianDam</title>
         
-        <script>
+        
+       <script>
             function openSlideMenu(){
-                document.getElementsByTagName('header')[0].style.alignItems = 'unset';
-                document.getElementsByTagName('header')[0].style.padding = '0';
-                document.getElementsByTagName('nav')[0].style.width = '22%';
-                document.getElementsByTagName('nav')[0].style.display = 'flex';
-                document.getElementById('nav-logo').style.margin = '68px -300%';
-            }
-        function closeSlideMenu(){
-            document.getElementsByTagName('header')[0].style.alignItems = 'center';
-            document.getElementsByTagName('header')[0].style.padding = '55px 5%';
-            document.getElementsByTagName('nav')[0].style.width = '0';
-            document.getElementsByTagName('nav')[0].style.display = 'none';
-        document.getElementById('nav-logo').style.margin = '0';
-        }
-        window.addEventListener('scroll', reveal);
-            function reveal(){
-              var reveals = document.querySelectorAll('.reveal');
-            
-              for(var i = 0; i < reveals.length; i++) {
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 100;
-            
-                if(revealtop < windowheight - revealpoint){
-                  reveals[i].classList.add('active');
-                }
-                else {
-                }
-              }
-            }
-        </script>
-
-    </head>
+         document.getElementsByTagName('header')[0].style.alignItems = 'unset';
+         document.getElementsByTagName('header')[0].style.padding = '0';
+         document.getElementsByTagName('nav')[0].style.width = '100%';
+         document.getElementsByTagName('nav')[0].style.display = 'flex';
+         document.getElementById('nav-logo').style.margin = '68px -300%';
+     }
+   function closeSlideMenu(){
+     document.getElementsByTagName('header')[0].style.alignItems = 'center';
+     document.getElementsByTagName('header')[0].style.padding = '55px 5%';
+     document.getElementsByTagName('nav')[0].style.width = '0';
+     document.getElementsByTagName('nav')[0].style.display = 'none';
+ document.getElementById('nav-logo').style.margin = '0';
+ 
+   }
+   window.addEventListener('scroll', reveal);
+             function reveal(){
+               var reveals = document.querySelectorAll('.reveal');
+             
+               for(var i = 0; i < reveals.length; i++) {
+                 var windowheight = window.innerHeight;
+                 var revealtop = reveals[i].getBoundingClientRect().top;
+                 var revealpoint = 100;
+             
+                 if(revealtop < windowheight - revealpoint){
+                   reveals[i].classList.add('active');
+                 }
+                 else {
+                 }
+               }
+             }
+         </script>
+ 
+     </head>
     <body>
         <header>
             <span>
@@ -54,8 +56,7 @@
                 </a>
             </span>
             <nav>
-                  <i onclick="closeSlideMenu()" class="fas fa-angle-double-left close"></i>
-
+                <i onclick="closeSlideMenu()" class="fa-solid fa-xmark close"></i>
                  <ul>
 
                      <li>
@@ -64,7 +65,7 @@
                      <li>
                          <a href="../mywork.html">My work</a>
                      </li>
-                    
+                     
                  </ul>
             </nav>
             <a href="../index.html">
@@ -74,99 +75,105 @@
         <main id="detail">
             <header>
                 <div class="yes">
-                    <h1> Asiandam
+                    <h1 data-before="Asiandam" data-after="Asiandam"> Asiandam
                     </h1>
                 </div>
             </header>  
-            <div id="backButton">
-                <a href="../mywork.html">Back</a> 
-                <a id="websiteButton" href="#">Website</a>
-            </div>
             <section>    
+                <div id="backButton">
+                    <a href="../mywork.html">Back</a> 
+                    <a id="websiteButton" href="#">Website</a>
+                    <p>2021</p>
+                    <p>HVA</p>
+                </div>
+      
                 <div id="articleWrapper">     
                     <article>
-                    <p>
-                        Asiandam is an app that provides Asian exchange students with an abundance of information about the important things such as Travelling, grocery shopping in Holland. And a large list of Asian restaurants and stores so the students can get used to Holland, without feeling homesick.
-                        </p>
-                        <p>
-                            Currently the website is only designed for mobile sizes, I have yet to make it responsive for all sizes. Something for a later date. Scroll down for the mobile images!
-                        </p>
-                        <h2> Year </h2>
-                        <p>
-                            2021
-                        </p>
-                        <h2> Client </h2>
-                        <p>
-                            Hogeschool van Amsterdam
-                        </p>
+                        <h2 chapter-number="01">Description</h2>
+                        <div>
+                            <p>
+                                Asiandam is an app that provides Asian exchange students with an abundance of information about the important things such as Travelling, grocery shopping in Holland. And a large list of Asian restaurants and stores so the students can get used to Holland, without feeling homesick.
 
-                        <h2> Assignment </h2> 
-                        <p>
-                            This was my first project on the HVA, it was about making up your own topic for helping exchange students getting used to Holland just a bit easier. In my case I was interested in making something for the Asian students, as I am an Asian myself! This project scored me an 8/10 
-                        </p>
+                            </p>
+                            <p>
+                                Currently the website is only designed for mobile sizes, I have yet to make it responsive for all sizes. Something for a later date. Scroll down for the mobile images!
+
+                            </p>
+                        </div>
+                    </article>  
+                    <div>
+                        <img src="../assets/jpop/jpop-mockup2.jpg" alt="An image showing mobile images of the website AutoDisk">
+                    </div>
+                    <article>
+                        <h2 chapter-number="02"> Assignment </h2> 
+                        <div>
+                            <p>
+                                This was my first project on the HVA, it was about making up your own topic for helping exchange students getting used to Holland just a bit easier. In my case I was interested in making something for the Asian students, as I am an Asian myself! This project scored me an 8/10 
+
+
+                            </p>
+                        </div>
                         <a class="button-1 reveal" href="https://jessyjamespasay20.github.io/asiandam/">Visit</a>
-                    </article>   
+                    </article>                    
                 </div>      
-                <aside>
-                   
-                </aside>
-            </section>    
-            <section>
-                <h2>
+            </section>  
+
+            <section id="applicationImageSection" class="mobile">
+                <h2 chapter-number="03">
                     Gallery
-                </h2>  
-                <div id="websiteImageSection" class="reveal">
-                    <figure>
+                </h2>   
+                <div class="reveal">
+                    <div>
                         <img src="../assets/asiandam/mobile-1.jpg">
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
+                    </div>
+                    <div>
                         <img src="../assets/asiandam/mobile-2.jpg">
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
+                    </div>
+                    <div>
                         <img src="../assets/asiandam/mobile-3.jpg">
-                        <figcaption></figcaption>
-                    </figure>
+                    </div>
                 </div> 
-            </section>
-            <section class="seemore-section">         
-                <h2>See more</h2>
-                <a class="button-1 reveal" href="../mywork.html">
-                    My work
-                </a>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-section footer-section-1">
-                <p>
-                    2023
-                </p>
+            </section>         
+            <div id="contact-section" class="reveal">
+                
+                <h2> See <div>more</div> <div>?</div></h2>
             
-                <small>&copy;JJP</small>
-            </div>
-            <div class="footer-section footer-section-2">
-                <a href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
-                    <i class="fa-solid fa-arrow-right"></i>
+         </div>
+     </main>
+     <footer>
+         <div class="footer-container">
+             <p>
+                 2023
+             </p>
+     
+         <div class="footer-social">
+             <a href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
+                 <i class="fa-solid fa-arrow-right"></i>
 
-                    <p>resumé </p>
-                </a>
-                <a href="https://www.linkedin.com/in/jessyjamespasay/">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>linkedin</p>
-                </a>
-                <a href="tel:+31624109099">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Phone</p>
-                </a>
-                <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    <p>Email</p>
-                </a>
-            </div>
-        </footer>                                                        
-    </body>
-    <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
-
+                 <p>resumé </p>
+             </a>
+             <a href="https://www.linkedin.com/in/jessyjamespasay/">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>linkedin</p>
+             </a>
+             <a href="tel:+31624109099">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Phone</p>
+             </a>
+             <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Email</p>
+             </a>
+         </div>
+         <small>&copy;JJP</small>
+     </div>
+     </footer>                             
+ </body>
+ <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
 </html>
+         
+         
+         
+            
+
             

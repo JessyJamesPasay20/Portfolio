@@ -13,39 +13,40 @@
         <title>JJP - Pokemon Fighter</title>
         
         <script>
-           function openSlideMenu(){
-        document.getElementsByTagName('header')[0].style.alignItems = 'unset';
-        document.getElementsByTagName('header')[0].style.padding = '0';
-        document.getElementsByTagName('nav')[0].style.width = '22%';
-        document.getElementsByTagName('nav')[0].style.display = 'flex';
-        document.getElementById('nav-logo').style.margin = '68px -300%';
-    }
-  function closeSlideMenu(){
-    document.getElementsByTagName('header')[0].style.alignItems = 'center';
-    document.getElementsByTagName('header')[0].style.padding = '55px 5%';
-    document.getElementsByTagName('nav')[0].style.width = '0';
-    document.getElementsByTagName('nav')[0].style.display = 'none';
-document.getElementById('nav-logo').style.margin = '0';
-  }
-  window.addEventListener('scroll', reveal);
-            function reveal(){
-              var reveals = document.querySelectorAll('.reveal');
-            
-              for(var i = 0; i < reveals.length; i++) {
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 100;
-            
-                if(revealtop < windowheight - revealpoint){
-                  reveals[i].classList.add('active');
-                }
-                else {
-                }
-              }
-            }
-        </script>
-
-    </head>
+            function openSlideMenu(){
+         document.getElementsByTagName('header')[0].style.alignItems = 'unset';
+         document.getElementsByTagName('header')[0].style.padding = '0';
+         document.getElementsByTagName('nav')[0].style.width = '100%';
+         document.getElementsByTagName('nav')[0].style.display = 'flex';
+         document.getElementById('nav-logo').style.margin = '68px -300%';
+     }
+   function closeSlideMenu(){
+     document.getElementsByTagName('header')[0].style.alignItems = 'center';
+     document.getElementsByTagName('header')[0].style.padding = '55px 5%';
+     document.getElementsByTagName('nav')[0].style.width = '0';
+     document.getElementsByTagName('nav')[0].style.display = 'none';
+ document.getElementById('nav-logo').style.margin = '0';
+ 
+   }
+   window.addEventListener('scroll', reveal);
+             function reveal(){
+               var reveals = document.querySelectorAll('.reveal');
+             
+               for(var i = 0; i < reveals.length; i++) {
+                 var windowheight = window.innerHeight;
+                 var revealtop = reveals[i].getBoundingClientRect().top;
+                 var revealpoint = 100;
+             
+                 if(revealtop < windowheight - revealpoint){
+                   reveals[i].classList.add('active');
+                 }
+                 else {
+                 }
+               }
+             }
+         </script>
+ 
+     </head>
     <body>
         <header>
             <span>
@@ -54,8 +55,7 @@ document.getElementById('nav-logo').style.margin = '0';
                 </a>
             </span>
             <nav>
-                  <i onclick="closeSlideMenu()" class="fas fa-angle-double-left close"></i>
-
+                <i onclick="closeSlideMenu()" class="fa-solid fa-xmark close"></i>
                  <ul>
 
                      <li>
@@ -64,109 +64,116 @@ document.getElementById('nav-logo').style.margin = '0';
                      <li>
                          <a href="../mywork.html">My work</a>
                      </li>
-            
+                     
                  </ul>
             </nav>
             <a href="../index.html">
             <img id="nav-logo" src="../assets/navbar-logo-1.png">
             </a>
-            </header>
+        </header>
             <main id="detail">
                 <header>
                     <div class="yes">
-                        <h1> Pokemon Fighter
+                        <h1 data-before="Pokemon Fighter" data-after="Pokemon Fighter"> Pokemon Fighter
                         </h1>
                     </div>
                 </header>  
-                <div id="backButton">
-                    <a href="../mywork.html">Back</a> 
-                    <a id="applicationButton" href="#">Application</a>
-                </div>
-                <section>        
-                    <div id="articleWrapper"> 
-                        <article>
+                <section>    
+                    <div id="backButton">
+                        <a href="../mywork.html">Back</a> 
+                        <a id="applicationButton" href="#">Website</a>
+                        <p>2022</p>
+                        <p>HVA</p>
+                    </div>
+
+                         
+                <div id="articleWrapper">     
+                    <article class="reveal">
+                        <h2 chapter-number="01">Description</h2>
+                        <div>
                             <p>
                                 Pokemon Fighter is a small battle simulation of the already known pokemon games. 1 pokemon ( monster ) fights 
                                 against 1 other pokemon, the winner is decided when one of the pokemons have their health depleted.
                             </p>
                             <p>
-                                All programmed with Javascript.
-                            </p>
-                            <h2> Year </h2>
-                            <p>
-                                2022
-                            </p>
-                            <h2> Client </h2>
-                            <p>
-                                Hogeschool van Amsterdam ( HVA )
-                            </p>
 
-                            <h2> Assignment </h2> 
+                            </p>
+                        </div>
+                    </article>   
+                    <div class="reveal">
+                        <img src="../assets/pokemonfighter/myWork.jpg" alt="An image showing mobile images of the website AutoDisk">
+                    </div>
+                    <article class="reveal">
+                        <h2 chapter-number="02"> Assignment </h2> 
+                        <div>
                             <p>
                                 My assignment was to make a battle simulation that is similar to the experience we have when playing the game itself, but build it using Javascript.
                                 You were allowed to use different monsters in order to so. Though I've always been a huge pokemon fan, so this 
-                                was an opportunity to see how these fights really work.        
-                            </p>
-                            <a class="button-1 reveal" href="https://github.com/JessyJamesPasay20/PokemonFighter">Github page</a>
-                            </article>         
-                        </div>
-                    <aside>
-                        <figure>
-                            <img src="../assets/pokemonfighter/startingScreen.JPG">
-                            <img src="../assets/pokemonfighter/pickPokemon.JPG">
-                            <figcaption></figcaption>
-                        </figure>
-                    </aside>
-                </section>     
-                <section>
-                    <h2>
-                        Gallery
-                    </h2>
-                    <div id="applicationImageSection" class="reveal">
-                        <figure>
-                            <img src="../assets/pokemonfighter/pokemonfighter.JPG"">
-                            <figcaption></figcaption>
-                        </figure>
-                        <a class="button-1 reveal" href="https://jessyjamespasay20.github.io/PokemonFighter/">Play it</a>
-                    </div> 
-                </section>
-                <section class="seemore-section">         
-                    <h2>See more</h2>
-                    <a class="button-1 reveal" href="../mywork.html">
-                        My work
-                    </a>
-                </section>
-            </main>
-            <footer>
-                <div class="footer-section footer-section-1">
-                    <p>
-                        2023
-                    </p>
-                
-                    <small>&copy;JJP</small>
-                </div>
-                <div class="footer-section footer-section-2">
-                    <a href="../assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
-                        <i class="fa-solid fa-arrow-right"></i>
-    
-                        <p>resumé </p>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jessyjamespasay/">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <p>linkedin</p>
-                    </a>
-                    <a href="tel:+31624109099">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <p>Phone</p>
-                    </a>
-                    <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <p>Email</p>
-                    </a>
-                </div>
-            </footer>                                     
-        </body>
-        <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
+                                was an opportunity to see how these fights really work.    
 
-    </html>
+                            </p>
+                        </div>
+                        <a class="button-1 reveal" href="https://github.com/JessyJamesPasay20/PokemonFighter">Github page</a>
+                    </article>                    
+                </div>      
+            </section>  
+
+            <section id="applicationImageSection" >
+                <h2 chapter-number="03" class="reveal">
+                    Gallery
+                </h2>   
+                <div class="reveal">
+                  
+                    <div>
+                        <img src="../assets/pokemonfighter/pickPokemon.JPG">
+                    </div>
+                    <div>
+                        <img src="../assets/pokemonfighter/pokemonfighter.JPG">
+                    </div>
+                </div> 
+                <a class="button-1 reveal" href="https://jessyjamespasay20.github.io/PokemonFighter/">Play it</a>
+
+            </section>         
+            <div id="contact-section" class="reveal">
                 
+                <h2> See <div>more</div> <div>?</div></h2>
+            
+         </div>
+     </main>
+     <footer>
+         <div class="footer-container">
+             <p>
+                 2023
+             </p>
+     
+         <div class="footer-social">
+             <a href="assets/JessyJamesPasayCV.pdf" download="/JessyJamesPasayCV.pdf" rel="noopener noreferrer" target="_blank" >
+                 <i class="fa-solid fa-arrow-right"></i>
+
+                 <p>resumé </p>
+             </a>
+             <a href="https://www.linkedin.com/in/jessyjamespasay/">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>linkedin</p>
+             </a>
+             <a href="tel:+31624109099">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Phone</p>
+             </a>
+             <a href="mailto:jessyjames186@gmail.com?subject=Mail to Jessy&body=Hi Jessy,">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <p>Email</p>
+             </a>
+         </div>
+         <small>&copy;JJP</small>
+     </div>
+     </footer>                             
+ </body>
+ <script src="https://kit.fontawesome.com/8753dc44a3.js" crossorigin="anonymous"></script>
+</html>
+         
+         
+         
+            
+
+            
